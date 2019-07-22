@@ -1,0 +1,52 @@
+---
+layout: default
+id: home
+nav: true
+nav-order: 1
+title: Home
+
+banner:
+  content: >
+    <h1 class="title title--xl">Crafting engaging digital experiences to inspire the world</h1>
+
+intro: >
+  <p class="text--xl">Our core goal is to inspire and motivate our members to experience unforgettable travel around the world. Our discerning, global audience comes to us precisely for such inspiration, through the beautiful and luxurious hotels we offer and the in-the-know content we create. We can put your brand front and centre of this conversation, allowing you to speak directly to our members. </p>
+  <p class="text--xl">Through creative concepts and innovative solutions, we will craft high-performing, bespoke campaigns across web, social, video, email and display, proven to captivate our members and influence their wanderlust. </p>
+
+
+---
+
+
+
+
+<div class="container text--center">
+  {{page.intro}}
+</div>
+
+
+
+<div class="container text--center">
+  <h2 class="title--md">WHO WE WORK WITH</h2>
+</div>
+
+
+
+<div class="container text--center">
+  <h2 class="title--md">CASE STUDIES</h2>
+  <div class="space--lg"></div>
+
+  <div class="row row--4-4-4">
+    {% assign projects = site.html_pages | where: 'layout', 'project-casestudy' | sort:'group-order' %}
+    {% for project in projects %}
+    <div class="col">
+      {% include project/tile.html %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="space--xxl"></div>
+  <div class="text--center">
+    <a href="{{site.baseurl}}/work" class="btn btn--solid btn--lg">View all work</a>
+  </div>
+</div>
+

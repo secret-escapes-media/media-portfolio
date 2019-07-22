@@ -1,0 +1,22 @@
+// main footer for the microsite
+
+.site-footer {
+
+  &__wrap {
+    @include page-padding;
+    padding-top: $s4;
+    padding-bottom: $s4;
+    font-weight: 400;
+    text-align: center;
+    border-top: 1px solid $grey-lighter;
+  }
+
+  // spacing for multiple logos in site footer
+  .logo { margin: $s-2; }
+
+  // white background for footer. Transparent colours will appear as block colours
+  position: relative;
+  background-color: $white;
+  //////////////////////////////////////////////////////////////////////////////
+
+}

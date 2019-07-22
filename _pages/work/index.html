@@ -1,0 +1,29 @@
+---
+layout: group
+id: work
+title: Work
+group: true
+nav: true
+nav-order: 2
+
+intro: >
+  <p class="text--xxl">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+
+---
+
+<div class="container">
+  <div class="row">
+    {% assign casestudies = site.html_pages | where: 'group-parent', page.id | sort:'group-order' %}
+    {% for project in casestudies %}
+      {% if project.layout == 'project-casestudy'%}
+        <div class="col col--8">
+          {% include project/casestudy-tile.html %}
+        </div>
+      {% else %}
+        <div class="col col--4">
+          {% include project/tile.html %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

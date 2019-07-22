@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+
+<div class="vpad--xxl">
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--8">
+        {{page.intro}}
+        <div class="space--sm"></div>
+        <a href="{{page.live-url}}" class="link link--external">
+          Check out the project
+          <img class="link__icon" src="{{site.img}}/icons/icon-external-link.svg">
+        </a>
+      </div>
+
+      <div class="col col--4">
+        <ul class="list--lined">
+          {% for detail in page.details %}<li><strong>{{detail.key}}: {{detail.val}}</strong></li>{% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="bg-img bg-img--21-9"></div>
+</div>
+
+<div class="vpad--xxl">
+  <div class="container container--xl">
+    <h2 class="title title--sm">The Challenge</h2>
+    <hr class="hr--left">
+    {{page.challenge}}
+  </div>
+</div>
+
+<div class="container">
+  <div class="bg-img bg-img--21-9"></div>
+</div>
+
+<div class="vpad--xxl">
+  <div class="container container--xl">
+    <h2 class="title title--sm">The Solution</h2>
+    <hr class="hr--left">
+    {{page.solution}}
+  </div>
+</div>
+
+<div class="container">
+  <div class="bg-img bg-img--21-9"></div>
+</div>
+
+<div class="vpad--xxl">
+  <div class="container container--xl">
+    <h2 class="title title--sm">The Result</h2>
+    <hr class="hr--left">
+    {{page.result}}
+  </div>
+  <div class="container text--center">
+    <div class="row row--4-4-4">
+      {% for highlight in page.highlights %}
+        <div class="col">
+          <hr>
+          <div class="title title--sm">{{highlight.val}}</div>
+          <span class="text--upper text--bold text--lg">{{highlight.key}}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="bg-img bg-img--21-9">
+    <div class="bg-img__content">
+      <div class="boxpad--lg">
+        <span class="text--upper text--bold text--lg">Next case study:</span>
+        <div class="title title--xxl">Project name</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
