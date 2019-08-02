@@ -9,11 +9,13 @@ layout: default
 
       <div class="col col--8">
         {{page.intro}}
-        <div class="space--sm"></div>
-        <a href="{{page.live-url}}" class="link link--external">
-          Check out the project
-          <img class="link__icon" src="{{site.img}}/icons/icon-external-link.svg">
-        </a>
+        {% if page.live-url %}
+          <div class="space--sm"></div>
+          <a href="{{page.live-url}}" class="link link--external">
+            Check out the project
+            <img class="link__icon" src="{{site.img}}/icons/icon-external-link.svg">
+          </a>
+        {% endif %}
       </div>
 
       <div class="col col--4">

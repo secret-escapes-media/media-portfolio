@@ -2,10 +2,27 @@
 layout: default
 ---
 
-<div class="vpad--xxl">
-  <div class="container container--xxl text--center">
+
+<div class="container">
+  <div class="width--lg">
     {{page.intro}}
   </div>
 </div>
 
-{{content}}
+
+<div class="container">
+  <div class="row">
+    {% assign projects = site.html_pages | where: 'group-parent', page.id | sort:'group-order' %}
+    {% for project in projects %}
+      {% if project.layout == 'project-casestudy'%}
+        <div class="col col--8">
+          {% include project/casestudy-tile.html %}
+        </div>
+      {% else %}
+        <div class="col col--4">
+          {% include project/tile.html %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

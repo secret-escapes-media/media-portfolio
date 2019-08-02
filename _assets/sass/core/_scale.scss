@@ -25,7 +25,7 @@ $s18: $s17 * $larger; // = 26.62333
 $s19: $s18 * $larger; // = 31.948
 $s20: $s19 * $larger; // = 38.3376
 
-$smaller: .8;
+$smaller: .9;
 $s-1:  $s0 * $smaller;   // = .8
 $s-2:  $s-1 * $smaller;  // = .64
 $s-3:  $s-2 * $smaller;  // = .512

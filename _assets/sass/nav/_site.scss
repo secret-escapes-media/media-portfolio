@@ -2,8 +2,8 @@
 
 $site-nav-height:     70px;
 $site-nav-height-sm:  54px;
-$site-nav-padding:    1.44rem;
-$site-nav-padding-sm: 1rem;
+$site-nav-padding:    $s4;
+$site-nav-padding-sm: $s2;
 
 // global site nav height with breakpoint
 @mixin site-nav-height {
@@ -16,12 +16,25 @@ $site-nav-padding-sm: 1rem;
 }
 
 .site-header {
-  position: relative;
+  position: fixed;
+  background-color: transparent;
   top: 0;
   left: 0;
   right: 0;
   z-index: $z-nav-upper;
   @include site-nav-height;
+  @include transition;
+  & .logo__svg {
+    width: 160px;
+    & .st0 { fill: $grey-darkest; }
+  }
+  &.scrolled {
+    background-color: rgba($black,0.85);
+    & .logo__svg .st0 { fill: $white; }
+  }
+  &.hide {
+    top: -$site-nav-height;
+  }
 
   // Need to come back to this, once I decide the best way. Either always in the layout file for the page
   // I do like the way this works on capital region, each section has the nav padding, works really well
@@ -48,6 +61,11 @@ $logo-bp: 600px;
   padding-right: $site-nav-padding-sm;
   font-family: $font-core;
   text-align: center;
+  width: 100%;
+  max-width: $xxxl;
+  margin-left: auto;
+  margin-right: auto;
+  @include page-padding;
 
   // spacing for double logos in site nav
   .logo + .logo { margin-left: $s0; }
@@ -63,7 +81,6 @@ $logo-bp: 600px;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    max-width: $xxxl;
     margin-left: auto;
     margin-right: auto;
   }
@@ -85,7 +102,7 @@ $logo-bp: 600px;
       flex-grow: 3; // needed for firefox
     }
     @include bp($nav-list-bp) {
-      width: 50%;
+      width: 33.33%;
       justify-content: flex-start;
     }
   }
@@ -94,10 +111,11 @@ $logo-bp: 600px;
     align-items: center;
     justify-content: flex-end;
     width: 25%;
+    height: 100%;
     min-width: $site-nav-height-sm;
     visibility: hidden;
     @include bp($logo-bp) {
-      width: 50%;
+      width: 66.667%;
       visibility: visible;
     }
   }
@@ -105,20 +123,46 @@ $logo-bp: 600px;
     display: none;
     margin-left: $s-1;
     line-height: 0;
+    list-style: none;
+    padding: 0;
+    height: 100%;
     @include bp($nav-list-bp) {
-      display: block;
+      display: flex;
+      flex-direction: row;
+    }
+    &-item {
+      color: $white;
+      display: flex;
+      margin: 0;
+      height: 100%;
+      align-items: center;
+      vertical-align: middle;
+      position: relative;
+      &:hover {
+        color: $white;
+      }
+      &.is-current {
+        color: $white;
+        &:after {
+          content: "";
+          width: 40px;
+          height: 2px;
+          background-color: $orange;
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+        }
+      }
     }
     &-link {
-      display: inline-block;
+      display: flex;
       padding: $s-1 $s-4;
       font-weight: 600;
       font-size: $s-1;
       line-height: 0;
       @include transition;
-      &:hover,
-      &.is-current {
-        color: $orange;
-      }
     }
   }
 }
@@ -193,7 +237,7 @@ $mobile-nav-width: 75%;
     font-size: $s0;
     font-weight: 700;
     text-transform: uppercase;
-    &.is-current { color: $orange; }
+    &.is-current { color: $black; }
   }
   @include bp($nav-list-bp){ display: none; }
 }

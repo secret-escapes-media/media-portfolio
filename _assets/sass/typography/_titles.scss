@@ -3,7 +3,10 @@
 .title {
 
   // custom content headline
+  color: $black;
   font-family: $font-title-01;
+  line-height: 1.2;
+  font-weight: 700;
   &--xxxl   { font-size: $s8; }
   &--xxl    { font-size: $s7; }
   &--xl     { font-size: $s6; }
@@ -24,6 +27,8 @@
     &--xxs    { font-size: $s2; }
     &--xxxs   { font-size: $s1; }
   }
+  .text--white &
+  &.text--white { color: $white; }
 
 }
 

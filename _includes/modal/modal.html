@@ -1,5 +1,7 @@
 
-{% assign modal-items = site.data.modal.text | concat: site.data.modal.highlight | concat: site.data.modal.video | concat: site.data.modal.form %}
+
+{% assign modal-items = site.html_pages | where: 'layout', 'project' %}
+
 
 <div class="js-modal modal is-closed content-spacing section-spacing">
   <div class="js-close-modal modal__close"></div>
@@ -39,6 +41,14 @@
 
           {% endif %}
         {% endfor %}
+      {% elsif item.layout == 'project' %}
+        <div
+          class="modal__item modal__item--{{item.id}} is-closed"
+          id="modal-{{item.id}}">
+          <div class="modal__content">
+            {% include modal/content/project.html %}
+          </div>
+        </div>
       {% endif %}
     {% endfor %}
 
