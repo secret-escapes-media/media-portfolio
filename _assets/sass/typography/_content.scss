@@ -42,6 +42,7 @@ hr {
   height: 1px;
   margin: $s-1 0;
   background-color: rgba($grey-darkest,0.2);
+  .text--white & { background-color: rgba($white,0.2); }
 }
 .hr {
   &--left {

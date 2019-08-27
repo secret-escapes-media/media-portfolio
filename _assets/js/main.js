@@ -17,3 +17,48 @@ $(window).scroll(function(event){
 });
 
 
+function scrollTrack(){
+  var st = $(window).scrollTop();
+
+  $('.scrolltrack').each(function(){
+    var content       = $(this).find('.scrolltrack__content');
+    var contentWidth  = content.width();
+    var contentOffset = content.offset();
+    var wrapperHeight = $(this).height();
+    var start         = $(this).offset().top;
+    var end           = $(this).offset().top + wrapperHeight - content.outerHeight();
+
+    // Inline width for changing position absolute to fixed
+    $(content).width( content.width() );
+
+    if( st > end ){
+      // If scrolled past window
+      if( $(this).hasClass('row--reverse') ){
+        $(content).css('right', 'auto' );
+        $(content).css('left', '0' );
+      }else{
+        $(content).css('left', 'auto' );
+      }
+      $(this).removeClass('is-fixed').addClass('is-parked');
+    }else if( st > start ){
+      // If within window
+      $(content).css('left', contentOffset.left );
+      $(this).addClass('is-fixed').removeClass('is-parked');
+    }else{
+      // If before window
+      if( $(this).hasClass('row--reverse') ){
+        $(content).css('right', 'auto' );
+        $(content).css('left', '0' );
+      }else{
+        $(content).css('left', 'auto' );
+      }
+      $(this).removeClass('is-fixed').removeClass('is-parked');
+    }
+  });
+
+}
+
+$(window).scroll(function(event){
+  scrollTrack();
+});
+

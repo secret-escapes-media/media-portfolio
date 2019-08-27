@@ -4,6 +4,7 @@
   background-color: $black;
   position: relative;
   display: block;
+  margin-top: $s4;
   &__wrap {
     @include page-padding;
     padding-top: $s4;

@@ -25,7 +25,7 @@ $site-nav-padding-sm: $s2;
   @include site-nav-height;
   @include transition;
   & .logo__svg {
-    width: 160px;
+    width: 140px;
     & .st0 { fill: $grey-darkest; }
   }
   &.scrolled {

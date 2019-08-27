@@ -27,9 +27,14 @@
     &--xxs    { font-size: $s2; }
     &--xxxs   { font-size: $s1; }
   }
-  .text--white &
-  &.text--white { color: $white; }
 
+  &--sans {
+    font-weight: 600;
+    font-family: $font-core;
+  }
+
+  .text--white &,
+  &.text--white { color: $white; }
 }
 
 .sub-title {

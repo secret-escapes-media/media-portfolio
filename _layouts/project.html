@@ -20,35 +20,56 @@ layout: default
 
       <div class="col col--4">
         <ul class="list--lined">
-          {% for detail in page.details %}<li><strong>{{detail.key}}: {{detail.val}}</strong></li>{% endfor %}
+          {% for detail in page.details %}<li><strong>{{detail.key}}:</strong> {{detail.val}}</li>{% endfor %}
         </ul>
       </div>
 
     </div>
   </div>
+</div>
 
-  <div class="container text--center">
-    <div class="row row--4-4-4">
-      {% for highlight in page.highlights %}
-        <div class="col">
-          <hr>
-          <div class="title title--sm">{{highlight.val}}</div>
-          <span class="text--upper text--bold text--lg">{{highlight.key}}</span>
-        </div>
-      {% endfor %}
-    </div>
+
+
+
+{{content}}
+
+
+
+
+<!-- TOP STATS -->
+<div class="container text--center">
+  <div class="row row--4-4-4">
+    {% for highlight in page.highlights %}
+      <div class="col">
+        <hr>
+        <div class="title title--sm">{{highlight.val}}</div>
+        <span class="title title--sans text--upper text--bold text--wide">{{highlight.key}}</span>
+        <hr>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
+
+<!-- NEXT PROJECT -->
+{% assign projects = site.html_pages | where: 'group-parent', 'work' %}
+{% assign nextId = page.group-order | plus: 1 %}
+{% assign nextProject = projects | where: 'group-order', nextId %}
+{{nextId}}
+{% for project in nextProject %}
 <div class="container">
-  <div class="bg-img bg-img--21-9">
+  <div class="bg-img bg-img--3-1" style="background-image: url({{site.img}}/projects/{{project.id}}/banner.jpg)">
+    <a href="{{site.baseurl}}/{{project.url}}" class="bg-img__link"></a>
     <div class="bg-img__content">
       <div class="boxpad--lg">
         <span class="text--upper text--bold text--lg">Next case study:</span>
-        <div class="title title--xxl">Project name</div>
+        <div class="title title--xxl">{{project.title}}</div>
       </div>
     </div>
   </div>
 </div>
+{% endfor %}
+<div class="space--xl"></div>
+
 
 

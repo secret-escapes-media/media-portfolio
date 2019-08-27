@@ -1,5 +1,7 @@
 ---
-layout: project-casestudy
+layout: project
+case-study: true
+
 id: lexus-the-design-collection
 title: "Lexus: The Design Collection"
 group-parent: work
@@ -12,29 +14,84 @@ live-url:
 
 details:
   - key: Date
-    val: 12/12/12
+    val: 2019
   - key: Client
     val: Lexus
   - key: Territories
     val: United Kingdom, Germany, Spain, Italy, Norway, Sweden
   - key: Outcomes
-    val: Website, Display, Email
+    val: Video, Website, Display, Email
 
 highlights:
-  - key: Reach
-    val: "1,500,000"
-  - key: Entries
-    val: "15,000"
-  - key: Sales
-    val: "800"
+  - key: Unique views
+    val: "122,000"
+  - key: Competition entries
+    val: "9,058"
+  - key: Test drives
+    val: "174"
 
-challenge: >
-  <p>Align the new Lexus UX with some of Secret Escapes most design-forward properties, complementing the unique style of the car and highlighting its purpose as the perfect urban-escape automobile. Generate test drives and capture data, and create assets that Lexus dealerships can use. Launch localised content in six markets.</p>
+challenge:
+  title: The challenge
+  text: >
+    <p>Align the new Lexus UX with some of Secret Escapes most design-forward properties, complementing the unique style of the car and highlighting its purpose as the perfect urban-escape automobile. Generate test drives and capture data, and create assets that Lexus dealerships can use. Launch localised content in six markets.</p>
 
-solution: >
-  <p>We created a bespoke Design Collection, sourcing our finest city-based design hotels and crafting localised design-lover’s city guides for each territory. This theme was fully explored in the two hero videos we made (one for the UK, one for EU), which showed our influencer experience a design getaway to two cities, staying at incredible Secret Escapes hotels, all facilitated by the Lexus UX. </p>
+solution:
+  title: The solution
+  text: >
+    <p>We created a bespoke Design Collection, sourcing our finest city-based design hotels and crafting localised design-lover’s city guides for each territory. This theme was fully explored in the two hero videos we made (one for the UK, one for EU), which showed our influencer experience a design getaway to two cities, staying at incredible Secret Escapes hotels, all facilitated by the Lexus UX. </p>
 
-result: >
-  <p></p>
+result:
+  title: The results
+  text: >
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+hub-london:
+  title: Title
+  text: >
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+hub-lookbook:
+  title: Title
+  text: >
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
 ---
+
+
+{% include project/layouts/video.html video-id="dxOOartTmMs" %}
+
+{% include project/layouts/content.html content=page.challenge %}
+
+<div class="container container--100 container--no-padding">
+  {% include project/layouts/image.html image="wide2.jpg" ratio="2-1" %}
+</div>
+
+<div class="container">
+  <div class="row row--6-6">
+    <div class="col">
+      {% include project/layouts/image.html image="1.jpg" ratio="1-1" %}
+    </div>
+    <div class="col">
+      {% include project/layouts/image.html image="2.jpg" ratio="1-1" %}
+    </div>
+    <div class="col">
+      {% include project/layouts/image.html image="3.jpg" ratio="1-1" %}
+    </div>
+    <div class="col">
+      {% include project/layouts/image.html image="4.jpg" ratio="1-1" %}
+    </div>
+  </div>
+</div>
+
+{% include project/layouts/content.html content=page.solution %}
+
+{% include project/layouts/section-longscroll.html image="hub-lookbook.jpg" content=page.hub-lookbook %}
+
+<div class="container">
+  {% include project/layouts/image.html image="display.jpg" ratio="16-9" %}
+</div>
+
+{% include project/layouts/section-longscroll.html image="hub-london.jpg" content=page.hub-london flip="true" %}
+
+{% include project/layouts/content.html content=page.result %}
+

@@ -141,7 +141,8 @@ $modaltransition-distance: 4em;
 .modal {
   &__nav {
     display: none;
-    .modal--carousel & {
+    .modal--carousel &,
+    .modal-gallery & {
       @include transition;
       display: block;
       position: absolute;
@@ -176,3 +177,5 @@ $modaltransition-distance: 4em;
   }
 
 }
+
+

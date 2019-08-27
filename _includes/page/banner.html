@@ -15,7 +15,14 @@
     </div>
 
   </div>
+  {% if page.layout == 'project' or page.layout == 'project-casestudy'  %}
+    <div class="banner__bg-image" style="background-image: url({{site.img}}/projects/{{page.id}}/banner.jpg);">
+      <div class="banner__fade"></div>
+      <div class="banner__overlay"></div>
+    </div>
+  {% else %}
   <div class="banner__image" style="background-image: url({{site.img}}/banner/{{page.id}}.jpg);">
-    <div class="banner__image-overlay"></div>
+  <div class="banner__overlay"></div>
   </div>
+  {% endif %}
 </div>

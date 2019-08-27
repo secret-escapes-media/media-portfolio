@@ -3,9 +3,11 @@ layout: default
 ---
 
 
-<div class="container">
-  <div class="width--lg">
-    {{page.intro}}
+<div class="vpad--xxl">
+  <div class="container">
+    <div class="width--lg">
+      {{page.intro}}
+    </div>
   </div>
 </div>
 
@@ -14,7 +16,7 @@ layout: default
   <div class="row">
     {% assign projects = site.html_pages | where: 'group-parent', page.id | sort:'group-order' %}
     {% for project in projects %}
-      {% if project.layout == 'project-casestudy'%}
+      {% if project.case-study %}
         <div class="col col--8">
           {% include project/casestudy-tile.html %}
         </div>

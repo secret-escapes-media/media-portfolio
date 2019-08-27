@@ -1,5 +1,6 @@
 ---
 layout: project
+
 id: wales
 title: Wales
 group-parent: work
@@ -8,4 +9,33 @@ group-order: 2
 intro: >
   <p class="text--xl">We were tasked with raising awareness of the Welsh tourist board’s Year of Discovery campaign and creating a compelling way to capture data for their ongoing marketing initiatives. We launched our own Discovery microsite, packed with experiences and adventure, and promoted an exclusive competition for data capture that included an experience – aligning itself with the overall messaging of the campaign.</p>
 
+live-url: "link"
+
+details:
+  - key: Date
+    val: 2018
+  - key: Client
+    val: Wales Tourist Board
+  - key: Territories
+    val: UK
+  - key: Outcomes
+    val: Website, Display, Email
+
+highlights:
+  - key: Competition entries
+    val: "11,597"
+  - key: Unique site views
+    val: "54,904"
+  - key: Homepage Takeover CTR
+    val: "2.825"
+
+gallery:
+  - image: hub-1.jpg
+  - image: display-1.jpg
+  - image: email-1.jpg
+
 ---
+
+<div class="container container--xxl">
+  {% include project/layouts/gallery.html content=page.gallery %}
+</div>

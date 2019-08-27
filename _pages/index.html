@@ -10,12 +10,36 @@ banner:
     <h1 class="title title--xxl">Crafting engaging digital experiences to inspire the world</h1>
 
 intro: >
-  <p class="text--xl">Our core goal is to inspire and motivate our members to experience unforgettable travel around the world. Our discerning, global audience comes to us precisely for such inspiration, through the beautiful and luxurious hotels we offer and the in-the-know content we create. We can put your brand front and centre of this conversation, allowing you to speak directly to our members. </p>
-  <p class="text--xl">Through creative concepts and innovative solutions, we will craft high-performing, bespoke campaigns across web, social, video, email and display, proven to captivate our members and influence their wanderlust. </p>
+  <p class="text--lg">Our core goal is to inspire and motivate our members to experience unforgettable travel around the world. Our discerning, global audience comes to us precisely for such inspiration, through the beautiful and luxurious hotels we offer and the in-the-know content we create. We can put your brand front and centre of this conversation, allowing you to speak directly to our members. </p>
+  <p class="text--lg">Through creative concepts and innovative solutions, we will craft high-performing, bespoke campaigns across web, social, video, email and display, proven to captivate our members and influence their wanderlust. </p>
 
 clients:
   title: Who we work with
-  content: Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.
+  logos:
+    - logo: british-airways.svg
+      name: British Airways
+    - logo: estee-lauder.svg
+      name: Estee Lauder
+    - logo: germany.png
+      name: Germany
+    - logo: hunter.svg
+      name: Hunter
+    - logo: lexus.svg
+      name: Lexus
+    - logo: nikon.svg
+      name: Nikon
+    - logo: qatar-airways.svg
+      name: Qatar Airways
+    - logo: royal-caribbean.svg
+      name: Royal Caribbean
+    - logo: sandals.svg
+      name: Sandals
+    - logo: singapore.svg
+      name: Singapore
+    - logo: south-africa.svg
+      name: South Africa
+    - logo: visit-britain.svg
+      name: Visit Britain
 
 services:
   title: What we deliver
@@ -45,48 +69,57 @@ services:
 
 
 
+<div class="vpad--xxl">
 
-<div class="container">
-  <div class="row row--no-gutters">
-    <div class="col col--3">
-      <h2 class="title title--md">Our mission</h2>
-    </div>
-    <div class="col col--9">
-      {{page.intro}}
+  <div class="container">
+    <div class="row row--no-gutters">
+      <div class="col col--3">
+        <h2 class="title title--sm title--sans">Our mission</h2>
+      </div>
+      <div class="col col--9">
+        {{page.intro}}
+      </div>
     </div>
   </div>
-</div>
 
+</div>
 
 
 
 <div class="bg--white vpad--xl">
 
-  <div class="container container--lg">
-    <h2 class="title title--xl">{{page.clients.title}}</h2>
-    <p class="text--lg">{{page.clients.content}}</p>
+
+
+  <div class="container clients" id="clients">
+    <div class="container container--lg">
+      <h2 class="title title--xl">{{page.clients.title}}</h2>
+      <div class="space--xl"></div>
+    </div>
+    <div class="row row--gutters-xs">
+      {% for client in page.clients.logos %}
+        <div class="col col--2">
+          <div class="clients__logo clients__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg-img--zoom bg--grey-lightest" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
-  <div class="space--xl"></div>
-  <div class="container">
-    <div class="bg--grey text--white">logos</div>
-  </div>
+
 
   <div class="space--xxxl"></div>
 
-  <div class="container container--lg">
-    <h2 class="title title--xl">{{page.services.title}}</h2>
-    <p class="text--lg">{{page.services.content}}</p>
-  </div>
-  <div class="space--xl"></div>
-
-  <div class="container">
+  <div class="container services" id="services">
+    <div class="container container--lg">
+      <h2 class="title title--xl">{{page.services.title}}</h2>
+      <p class="text--lg">{{page.services.content}}</p>
+    </div>
+    <div class="space--xl"></div>
     <div class="row">
       {% for item in page.services.items %}
-      <div class="col col--2 text--center">
+      <div class="col col--2 text--center services__item">
         <div class="bg-img bg-img--1-1 bg-img--circle"></div>
         <div class="space--xs"></div>
-        <h4 class="title title--xxxs">{{item.title}}</h4>
+        <h4 class="title title--xxxs title--sans">{{item.title}}</h4>
       </div>
       {% endfor %}
     </div>
@@ -109,8 +142,9 @@ services:
     </div>
     <div class="space--xl"></div>
     <div class="row row--6-6">
-      {% assign projects = site.html_pages | where: 'layout', 'project-casestudy' | sort:'group-order' %}
-      {% for project in projects %}
+      {% assign projects = site.html_pages | where: 'group-parent', 'work' %}
+      {% assign casestudies = projects | where: 'case-study', 'true' | sort:'group-order' %}
+      {% for project in casestudies %}
       <div class="col">
         {% include project/casestudy-tile.html %}
       </div>

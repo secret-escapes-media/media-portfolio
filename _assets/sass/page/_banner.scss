@@ -9,7 +9,6 @@
   height: 40%;
   min-height: 150px;
   max-height: 400px;
-  margin-bottom: $s8;
   @include bp($lg){
     height: 60%;
     min-height: 250px;
@@ -35,17 +34,25 @@
     z-index: $z-content;
     background-color: $grey-light;
     @include background-attributes;
-    &-overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.2)),to(rgba(0,0,0,0.2)));
-      background: -o-linear-gradient(top,rgba(255,255,255,0) 0,rgba(0,0,0,0.2) 100%);
-      background: linear-gradient(to bottom,rgba(255,255,255,0) 0,rgba(0,0,0,0.2) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );
-    }
+  }
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $z-content;
+    background-color: $grey-light;
+    @include background-attributes;
+  }
+  &__overlay {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($black,0.2);
   }
   &__nav {
     // optional container for navigation include
@@ -62,6 +69,7 @@
 
   &__fade {
     position: absolute;
+    z-index: 1;
     left: 0;
     right: 0;
     bottom: 0;
@@ -70,5 +78,12 @@
     background: -o-linear-gradient(top,rgba(255,255,255,0) 0,#fff 100%);
     background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );
+  }
+}
+
+.layout--project {
+  & .banner {
+    color: $white;
+    & .title { color: $white;  }
   }
 }

@@ -1,5 +1,7 @@
 ---
-layout: project-casestudy
+layout: project
+case-study: true
+
 id: winter-in-germany
 title: Winter in Germany
 group-parent: work
@@ -21,12 +23,12 @@ details:
     val: Website, Display, Email
 
 highlights:
-  - key: Reach
-    val: "000"
-  - key: Entries
-    val: "000"
-  - key: Increase in bookings
-    val: "17.72%"
+  - key: Video views
+    val: "81,108"
+  - key: Competition entries
+    val: "4,996"
+  - key: Homepage clicks
+    val: "8,495"
 
 challenge: >
   <p>The German tourist board had a range of passion points they wanted us to cover. From wellness to festive markets, we needed to tie together a range of experiences in an inspiring, multi-platform campaign, and then go on to launch and localise that across three territories: UK, BE & NL.</p>
@@ -38,3 +40,12 @@ result: >
   <p>In the UK, we saw a YoY uplift on bookings of 17.72%, with a further uplift of 11.94% on room nights, an indication that our travel guides had inspired our members to book, and explore further, the delights of a winter in Germany. </p>
 
 ---
+
+
+{% include project/layouts/video.html video-id="dxOOartTmMs" %}
+
+{% include project/layouts/content.html content=page.challenge %}
+
+{% include project/layouts/content.html content=page.solution %}
+
+{% include project/layouts/content.html content=page.result %}
