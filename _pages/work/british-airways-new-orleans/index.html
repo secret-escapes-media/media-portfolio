@@ -8,7 +8,7 @@ group-parent: work
 group-order: 1
 
 intro: >
-  <p class="text--lg">After a successful campaign the previous year, British Airways and the New Orleans Tourist Board came to us to build on the momentum we had achieved during the last campaign.</p>
+  <p class="text--xl">After a successful campaign the previous year, British Airways and the New Orleans Tourist Board came to us to build on the momentum we had achieved during the last campaign.</p>
 
 live-url: "http://m-stg.secretescapes.com/2018/british-airways-new-orleans"
 
@@ -33,34 +33,39 @@ highlights:
 
 
 
-challenge:
-  title: The Challenge
-  text: >
-    <p>Taking our learnings from the previous New Orleans hub, we needed to build on our content offering and create a new way to promote the destination to our members. We also needed to promote the direct route British Airways were offering, and tie in bookable holidays so our members were inspired to book their own NOLA experience. </p>
+challenge: >
+  <h2 class="title title--lg">The Challenge</h2>
+  <p class="text--lg">Taking our learnings from the previous New Orleans hub, we needed to build on our content offering and create a new way to promote the destination to our members. We also needed to promote the direct route British Airways were offering, and tie in bookable holidays so our members were inspired to book their own NOLA experience. </p>
 
-solution:
-  title: The Solution
-  text: >
-    <p>We picked four themes proven to resonate with our members, creating an inspirational guide with local’s tips included to underpin our hero piece – a video guide to the city, presented by our editor. The content was supported by CTAs making it clear that British Airways offered the best way to reach the city, with a ‘holidays’ page packed with tempting deals. </p>
+solution: >
+  <h2 class="title title--lg">The Solution</h2>
+  <p class="text--lg">We picked four themes proven to resonate with our members, creating an inspirational guide with local’s tips included to underpin our hero piece – a video guide to the city, presented by our editor. The content was supported by CTAs making it clear that British Airways offered the best way to reach the city, with a ‘holidays’ page packed with tempting deals. </p>
 
-result:
-  title: The Result
-  text: >
-    <p>After browsing the content on the site and learning more about New Orleans, 15% of users went on and clicked through to British Airways direct.</p>
+result: >
+  <h2 class="title title--lg">The Result</h2>
+  <p class="text--lg">After browsing the content on the site and learning more about New Orleans, 15% of users went on and clicked through to British Airways direct.</p>
 
 
 
 
-guide-content:
-  title: Title
-  text: >
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
 
+overview-content: >
+  <hr>
+  <h4 class="title title--sm">Microsite</h4>
+  <p>"Piercing brass and hot, jazz-fuelled nights on Frenchmen Street, steaming bowls of gumbo and sipping a sazerac in the Quarter, shotgun homes and decorated French mansions – New Orleans is a heady concoction of spellbinding cultural pursuits."</p>
+  <a href="http://m-stg.secretescapes.com/2018/british-airways-new-orleans/" class="link link--external" target="_blank">View live</a>
 
-overview-content:
-  title: Title
-  text: >
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+guide-content: >
+  <hr>
+  <div class="title title--sans text--upper text--wide text--bold">Microsite</div>
+  <div class="space--xxs"></div>
+  <h4 class="title title--sm">Explore NOLA</h4>
+  <p class="text--lg">"New Orleans, or NOLA, as the locals say, offers fortuitous adventure on every street."</p>
+  <a href="http://m-stg.secretescapes.com/2018/british-airways-new-orleans/explore/" class="link link--external" target="_blank">View live</a>
+
+flights-content: >
+  <h4 class="title title--sm">Fly non-stop to New Orleans</h4>
+  <p class="text--lg">"British Airways is the only airline to offer year-round, direct flights from London. Relax on the state-of-the-art 787 Dreamliner, featuring World Traveller economy, or upgrade to premium economy or to the luxury of Club World business class, all set to whisk you away to the birthplace of jazz and sazeracs in comfort and ease. Why wait? Book now to realise your NOLA dream."</p>
 
 
 ---
@@ -70,13 +75,18 @@ overview-content:
 {% include project/layouts/video.html video-id="unInkhcjVZk" %}
 
 
+
 {% include project/layouts/content.html content=page.challenge %}
 
 
 <div class="container">
+  {% include project/layouts/image.html image="display.jpg" ratio="16-9" %}
+</div>
+
+<div class="container">
   <div class="row">
     <div class="col col--6">
-      {% include project/layouts/image.html image="1.jpg" ratio="4-3" caption="Caption" %}
+      {% include project/layouts/image.html image="1.jpg" ratio="4-3" %}
     </div>
     <div class="col col--6">
       {% include project/layouts/image.html image="2.jpg" ratio="4-3" %}
@@ -85,22 +95,20 @@ overview-content:
 </div>
 
 
+
+
 {% include project/layouts/content.html content=page.solution %}
 
 
-{% include project/layouts/section-longscroll.html image="hub-explore.jpg" content=page.guide-content %}
+
 
 {% include project/layouts/section-longscroll.html image="hub-overview.jpg" content=page.overview-content flip="true" %}
 
-<div class="container">
-  {% include project/layouts/image.html image="display.jpg" ratio="16-9" %}
-</div>
+{% include project/layouts/section-longscroll.html image="hub-explore.jpg" content=page.guide-content %}
+
+{% include project/layouts/section-background.html background="flights-bg.jpg" content=page.flights-content %}
+
+
 
 
 {% include project/layouts/content.html content=page.result %}
-
-
-
-<div class="container container--100 container--no-padding">
-  {% include project/layouts/image.html image="4.jpg" ratio="21-9" %}
-</div>

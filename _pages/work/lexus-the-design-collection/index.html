@@ -10,7 +10,7 @@ group-order: 4
 intro: >
   <p class="text--xl">A new car, a new concept. The new Lexus UX provided a very different challenge to the previous Lexus RX campaign we ran. </p>
 
-live-url:
+live-url: "http://m-stg.secretescapes.com/2019/lexus-design-collection/uk/"
 
 details:
   - key: Date
@@ -30,30 +30,31 @@ highlights:
   - key: Test drives
     val: "174"
 
-challenge:
-  title: The challenge
-  text: >
-    <p>Align the new Lexus UX with some of Secret Escapes most design-forward properties, complementing the unique style of the car and highlighting its purpose as the perfect urban-escape automobile. Generate test drives and capture data, and create assets that Lexus dealerships can use. Launch localised content in six markets.</p>
+challenge: >
+  <h2 class="title title--lg">The challenge</h2>
+  <p class="text--xl">Align the new Lexus UX with some of Secret Escapes most design-forward properties, complementing the unique style of the car and highlighting its purpose as the perfect urban-escape automobile. Generate test drives and capture data, and create assets that Lexus dealerships can use. Launch localised content in six markets.</p>
 
-solution:
-  title: The solution
-  text: >
-    <p>We created a bespoke Design Collection, sourcing our finest city-based design hotels and crafting localised design-lover’s city guides for each territory. This theme was fully explored in the two hero videos we made (one for the UK, one for EU), which showed our influencer experience a design getaway to two cities, staying at incredible Secret Escapes hotels, all facilitated by the Lexus UX. </p>
+solution: >
+  <h2 class="title title--lg">The solution</h2>
+  <p class="text--xl">We created a bespoke Design Collection, sourcing our finest city-based design hotels and crafting localised design-lover’s city guides for each territory. This theme was fully explored in the two hero videos we made (one for the UK, one for EU), which showed our influencer experience a design getaway to two cities, staying at incredible Secret Escapes hotels, all facilitated by the Lexus UX. </p>
 
-result:
-  title: The results
-  text: >
-    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+result: >
+  <h2 class="title title--lg">The results</h2>
+  <p class="text--xl">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
-hub-london:
-  title: Title
-  text: >
-    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+hub-london: >
+  <h4 class="title title--sm title--sans">Title</h4>
+  <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+  <a href="#" class="link link--external">View here</a>
 
-hub-lookbook:
-  title: Title
-  text: >
-    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+display: >
+  <h4 class="title title--sm title--sans">Title</h4>
+  <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+  <a href="#" class="link link--external">View here</a>
+
+hub-lookbook: >
+  <h4 class="title title--sm title--sans">Title</h4>
+  <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
 ---
 
@@ -89,6 +90,7 @@ hub-lookbook:
 
 <div class="container">
   {% include project/layouts/image.html image="display.jpg" ratio="16-9" %}
+  {% include project/layouts/content.html content=page.display %}
 </div>
 
 {% include project/layouts/section-longscroll.html image="hub-london.jpg" content=page.hub-london flip="true" %}

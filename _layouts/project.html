@@ -10,11 +10,7 @@ layout: default
       <div class="col col--8">
         {{page.intro}}
         {% if page.live-url %}
-          <div class="space--sm"></div>
-          <a href="{{page.live-url}}" class="link link--external">
-            Check out the project
-            <img class="link__icon" src="{{site.img}}/icons/icon-external-link.svg">
-          </a>
+          <a href="{{page.live-url}}" class="link link--external">Check out the project</a>
         {% endif %}
       </div>
 
@@ -55,11 +51,14 @@ layout: default
 {% assign projects = site.html_pages | where: 'group-parent', 'work' %}
 {% assign nextId = page.group-order | plus: 1 %}
 {% assign nextProject = projects | where: 'group-order', nextId %}
-{{nextId}}
+{% if nextProject == empty %}
+  {% assign nextProject = projects | where: 'group-order', '1' %}
+{% endif %}
+
 {% for project in nextProject %}
 <div class="container">
   <div class="bg-img bg-img--3-1" style="background-image: url({{site.img}}/projects/{{project.id}}/banner.jpg)">
-    <a href="{{site.baseurl}}/{{project.url}}" class="bg-img__link"></a>
+    <a href="{{site.baseurl}}{{project.url}}" class="bg-img__link"></a>
     <div class="bg-img__content">
       <div class="boxpad--lg">
         <span class="text--upper text--bold text--lg">Next case study:</span>
@@ -69,6 +68,7 @@ layout: default
   </div>
 </div>
 {% endfor %}
+
 <div class="space--xl"></div>
 
 

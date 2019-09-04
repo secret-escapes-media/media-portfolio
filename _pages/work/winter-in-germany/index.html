@@ -10,11 +10,11 @@ group-order: 8
 intro: >
   <p class="text--xl">Following the success of our previous Germany campaigns, the tourist board came to us once more to promote winter in Germany to our members. </p>
 
-live-url:
+live-url: "http://m-stg.secretescapes.com/2018/winter-in-germany/uk/"
 
 details:
   - key: Date
-    val: 12/12/12
+    val: 01/12/2018
   - key: Client
     val: German National Tourist Board
   - key: Territories
@@ -31,21 +31,90 @@ highlights:
     val: "8,495"
 
 challenge: >
-  <p>The German tourist board had a range of passion points they wanted us to cover. From wellness to festive markets, we needed to tie together a range of experiences in an inspiring, multi-platform campaign, and then go on to launch and localise that across three territories: UK, BE & NL.</p>
+  <h2 class="title title--lg">The challenge</h2>
+  <p class="text--lg">The German tourist board had a range of passion points they wanted us to cover. From wellness to festive markets, we needed to tie together a range of experiences in an inspiring, multi-platform campaign, and then go on to launch and localise that across three territories: UK, BE & NL.</p>
 
 solution: >
-  <p>A central microsite hosted diverse pieces of content, including a countdown advent calendar integrated into a display campaign. Covering themes like wellness, festive markets and winter to-dos, our hub became the go-to for winter inspiration. Underpinning this content was a ‘Winter in Germany’ film, which saw our editor show the best of seasonal Germany from Berlin to the Bavarian Alps. Our content was complemented by a range of handpicked offers for our members to book. </p>
+  <h2 class="title title--lg">The solution</h2>
+  <p class="text--lg">A central microsite hosted diverse pieces of content, including a countdown advent calendar integrated into a display campaign. Covering themes like wellness, festive markets and winter to-dos, our hub became the go-to for winter inspiration. Underpinning this content was a ‘Winter in Germany’ film, which saw our editor show the best of seasonal Germany from Berlin to the Bavarian Alps. Our content was complemented by a range of handpicked offers for our members to book. </p>
 
 result: >
-  <p>In the UK, we saw a YoY uplift on bookings of 17.72%, with a further uplift of 11.94% on room nights, an indication that our travel guides had inspired our members to book, and explore further, the delights of a winter in Germany. </p>
+  <h2 class="title title--lg">The result</h2>
+  <p class="text--lg">In the UK, we saw a YoY uplift on bookings of 17.72%, with a further uplift of 11.94% on room nights, an indication that our travel guides had inspired our members to book, and explore further, the delights of a winter in Germany. </p>
+
+
+
+
+hp-tiles: >
+  <img src="{{site.img}}/projects/{{page.id}}/hp-tiles.png" />
+
+
+
+advent-copy: >
+  <h4 class="title title--sm title--sans">Title</h4>
+  <p>Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+  <a href="http://m-stg.secretescapes.com/2018/winter-in-germany/uk/advent-calendar" class="link link--external" target="_blank">View live</a>
+
+advent-days:
+  - image: hub-advent.jpg
+  - image: hub-adventDay1.jpg
+  - image: hub-adventDay2.jpg
+  - image: hub-adventDay3.jpg
+  - image: hub-adventDay4.jpg
+  - image: hub-adventDay5.jpg
+  - image: hub-adventDay6.jpg
+
+display-copy: >
+  <h4 class="title title--md">Display campaign</h4>
+  <p class="text--lg">Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+
+
+
+placeholder-copy: >
+  <hr>
+  <h4 class="title title--sm title--sans">Title</h4>
+  <p>Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+
+
 
 ---
 
 
-{% include project/layouts/video.html video-id="dxOOartTmMs" %}
+
+{% include project/layouts/video.html video-id="wHrDlDaFya4" %}
+
+
+
 
 {% include project/layouts/content.html content=page.challenge %}
 
+{% include project/layouts/section-background.html background="hp-background.jpg" content=page.hp-tiles %}
+
+
+
+
 {% include project/layouts/content.html content=page.solution %}
+
+<div class="container">
+  {% include project/layouts/image.html image="hub-overviewBanner.jpg" ratio="16-9" %}
+</div>
+
+{% include project/layouts/section-longscroll.html image="hub-guide1.jpg" content=page.placeholder-copy %}
+
+<div class="container">
+  <div class="row row--valign-center">
+    <div class="col col--4">
+      {% include project/layouts/content.html content=page.advent-copy %}
+    </div>
+    <div class="col col--8">
+      {% include project/layouts/gallery.html content=page.advent-days %}
+    </div>
+  </div>
+</div>
+
+{% include project/layouts/section-background.html background="display-background.jpg" content=page.display-copy theme="dark" %}
+
+
+
 
 {% include project/layouts/content.html content=page.result %}

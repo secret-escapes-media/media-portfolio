@@ -57,7 +57,7 @@ function scrollTrack(){
   });
 
 }
-
+scrollTrack();
 $(window).scroll(function(event){
   scrollTrack();
 });

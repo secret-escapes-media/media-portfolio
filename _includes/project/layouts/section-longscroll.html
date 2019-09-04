@@ -5,14 +5,12 @@
 <div class="container">
   <div class="row scrolltrack {% if include.flip %} row--reverse{% endif %}">
 
-
-
-
     <div class="col col--8 scrolltrack__image">
       <img src="{{site.img}}/projects/{{page.id}}/{{image}}">
     </div>
     <div class="col col--4 scrolltrack__content">
-      {% include project/layouts/content-aside.html content=content %}
+      {{content}}
     </div>
+
   </div>
 </div>

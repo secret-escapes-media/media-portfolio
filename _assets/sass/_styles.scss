@@ -77,11 +77,6 @@
 
 .project {
 
-  // SECTIONS
-  &__content-aside {
-    border-top: 1px solid rgba($grey-darkest,0.2);
-    padding-top: $s2;
-  }
 }
 
 .scrolltrack {
@@ -120,8 +115,8 @@
   PROJECT SLIDER
 =====================================*/
 
-$icon-size-sm: 3.2em;
-$icon-size: 4em;
+$icon-size-sm: 2.4em;
+$icon-size: 3.6em;
 
 .project-gallery {
   position: relative;
@@ -175,6 +170,7 @@ $icon-size: 4em;
     background-size: 1em;
     cursor: pointer;
     user-select: none;
+    border-radius: 999px 0 0 999px;
     &:hover{ background-color: $black; }
     @include bp($lg){
       bottom: auto;
@@ -188,6 +184,7 @@ $icon-size: 4em;
     &--next {
       background-image: url('../img/icons/arrow-right.svg');
       right: 0;
+      border-radius: 0 999px 999px 0;
       @include bp($lg){
         right: -$icon-size;
       }
