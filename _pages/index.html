@@ -7,62 +7,52 @@ title: Home
 
 banner:
   content: >
-    <h1 class="title title--xxl">Crafting engaging digital experiences to inspire the world</h1>
+    <h1 class="title title--xxxl"><span class="text--bolder" id="banner-text-swap">Industry-leading</span><br /> <span class="text--light">solutions to<br /> inspire escapes</span></h1>
 
 intro: >
   <p class="text--lg">Our core goal is to inspire and motivate our members to experience unforgettable travel around the world. Our discerning, global audience comes to us precisely for such inspiration, through the beautiful and luxurious hotels we offer and the in-the-know content we create. We can put your brand front and centre of this conversation, allowing you to speak directly to our members. </p>
   <p class="text--lg">Through creative concepts and innovative solutions, we will craft high-performing, bespoke campaigns across web, social, video, email and display, proven to captivate our members and influence their wanderlust. </p>
 
 clients:
-  title: Who we work with
-  logos:
-    - logo: british-airways.svg
-      name: British Airways
-    - logo: estee-lauder.svg
-      name: Estee Lauder
-    - logo: germany.png
-      name: Germany
-    - logo: hunter.svg
-      name: Hunter
-    - logo: lexus.svg
-      name: Lexus
-    - logo: nikon.svg
-      name: Nikon
-    - logo: qatar-airways.svg
-      name: Qatar Airways
-    - logo: royal-caribbean.svg
-      name: Royal Caribbean
-    - logo: sandals.svg
-      name: Sandals
-    - logo: singapore.svg
-      name: Singapore
-    - logo: south-africa.svg
-      name: South Africa
-    - logo: visit-britain.svg
-      name: Visit Britain
+  - logo: british-airways.svg
+    name: British Airways
+  - logo: estee-lauder.svg
+    name: Estee Lauder
+  - logo: germany.png
+    name: Germany
+  - logo: hunter.svg
+    name: Hunter
+  - logo: lexus.svg
+    name: Lexus
+  - logo: nikon.svg
+    name: Nikon
+  - logo: qatar-airways.svg
+    name: Qatar Airways
+  - logo: royal-caribbean.svg
+    name: Royal Caribbean
+  - logo: sandals.svg
+    name: Sandals
+  - logo: singapore.svg
+    name: Singapore
+  - logo: south-africa.svg
+    name: South Africa
+  - logo: visit-britain.svg
+    name: Visit Britain
+
 
 services:
-  title: What we deliver
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.
-  items:
-
-    - id: thing1
-      title: Audience segmentation
-
-    - id: thing2
-      title: Incremental bookings
-
-    - id: thing3
-      title: Engagement
-
-    - id: thing4
-      title: Brand awareness and storytelling
-
-    - id: thing5
-      title: Bespoke creative solutions
-
-    - id: thing6
-      title: True brand integration
+  - id: audience-segmentation
+    title: Audience segmentation
+  - id: incremental-bookings
+    title: Incremental bookings
+  - id: engagement
+    title: Engagement
+  - id: storytelling
+    title: Brand awareness and storytelling
+  - id: creative-solutions
+    title: Creative solutions
+  - id: integration
+    title: True brand integration
 
 
 ---
@@ -72,25 +62,28 @@ services:
 <div class="vpad--xl">
 
   <div class="container">
-    <div class="row row--no-gutters">
-      <div class="col col--3">
-        <h2 class="title title--sm title--sans">Our mission</h2>
-      </div>
-      <div class="col col--9">
-        {{page.intro}}
-      </div>
+    <div class="width width--xl ">
+      {{page.intro}}
     </div>
   </div>
 
+</div>
+<hr>
 
+
+
+<div class="bg--white vpad--xl">
 
   <div class="container clients" id="clients">
-    <div class="container container--lg">
-      <h2 class="title title--xl">{{page.clients.title}}</h2>
+    <div class="width width--xl text--center">
+
+      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Clients</h2>
+      <div class="space--xs"></div>
+      <h3 class="title title--lg">Who we work with</h3>
       <div class="space--xl"></div>
     </div>
     <div class="row row--gutters-xs">
-      {% for client in page.clients.logos %}
+      {% for client in page.clients %}
         <div class="col col--2">
           <div class="clients__logo clients__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg-img--zoom bg--grey-lightest" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
         </div>
@@ -101,15 +94,20 @@ services:
 
 
   <div class="container services" id="services">
-    <div class="container container--lg">
-      <h2 class="title title--xl">{{page.services.title}}</h2>
-      <p class="text--lg">{{page.services.content}}</p>
+    <div class="width width--xl text--center">
+
+      <div class="space--lg"></div>
+      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Services</h2>
+      <div class="space--xs"></div>
+      <h3 class="title title--lg">What we deliver</h3>
+      <p class="text--lg">We have a range of insights and expertise that can be used to successfully deliver on your campaign objectives and targets.</p>
     </div>
     <div class="space--xl"></div>
     <div class="row">
-      {% for item in page.services.items %}
+      {% for item in page.services %}
       <div class="col col--2 text--center services__item">
-        <div class="bg-img bg-img--1-1 bg-img--circle"></div>
+        <div class="services__item-icon bg-img bg-img--1-1 bg-img--circle" style="background-image: url({{site.img}}/icons/icon-{{item.id}}.svg);" alt="{{item.title}}">
+        </div>
         <div class="space--xs"></div>
         <h4 class="title title--xxxs title--sans">{{item.title}}</h4>
       </div>
@@ -117,21 +115,19 @@ services:
     </div>
   </div>
 
-</div>
 
 
 
-
-<div class="bg--grey-lightest vpad--xl">
   <div class="container">
-    <div class="row">
 
-      <div class="col col--8">
-        <h2 class="title title--xl">Case studies</h2>
-        <p class="text--lg">Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.</p>
-      </div>
-
+    <div class="width width--xl text--center">
+      <div class="space--lg"></div>
+      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Case Studies</h2>
+      <div class="space--xs"></div>
+      <h3 class="title title--lg">Our most talked-about <br /> media campaigns</h3>
+      <p class="text--lg">Working across a diverse range of industries, we have produced integrated creative solutions with results that match and exceed the expectations of our previous clients. </p>
     </div>
+
     <div class="space--xl"></div>
     <div class="row row--6-6">
       {% assign projects = site.html_pages | where: 'group-parent', 'work' %}

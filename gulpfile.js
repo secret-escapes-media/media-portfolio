@@ -89,6 +89,7 @@ function buildJsMain(cb) {
     './_assets/js/_components/modal.js',
     './_assets/js/_components/slider.js',
     './_assets/js/_components/sticky-nav.js',
+    './_assets/js/_components/mapbox.js',
 
     // custom js for project
     './_assets/js/main.js',

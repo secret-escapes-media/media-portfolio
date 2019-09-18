@@ -131,18 +131,21 @@ $logo-bp: 600px;
       flex-direction: row;
     }
     &-item {
-      color: $white;
+      color: $grey-darkest;
       display: flex;
       margin: 0;
       height: 100%;
       align-items: center;
       vertical-align: middle;
       position: relative;
+      .scrolled & { color: $white; }
       &:hover {
-        color: $white;
+        color: $grey-darkest;
+        .scrolled & { color: $white; }
       }
       &.is-current {
-        color: $white;
+        color: $grey-darkest;
+        .scrolled & { color: $white; }
         &:after {
           content: "";
           width: 40px;
@@ -163,6 +166,21 @@ $logo-bp: 600px;
       font-size: $s-1;
       line-height: 0;
       @include transition;
+    }
+
+    // Inverted nav on image
+    .layout--project & {
+      &-item {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+        &.is-current {
+          color: $white;
+          &:after {background-color: $orange;}
+        }
+      }
+      &-link {}
     }
   }
 }

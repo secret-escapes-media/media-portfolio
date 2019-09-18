@@ -16,7 +16,11 @@
 
 .services {
   &__item {
-    & .bg-img {background-color: #f2f2f2; }
+    &-icon {
+      background-size: 50%;
+      border: 1px solid rgba($grey-darkest,0.1);
+      box-shadow: 0 0 15px 0 rgba($grey-darkest,0.1);
+    }
   }
 }
 
@@ -111,9 +115,7 @@
 
 
 
-/*=====================================
-  PROJECT SLIDER
-=====================================*/
+/*== PROJECT SLIDER ==*/
 
 $icon-size-sm: 2.4em;
 $icon-size: 3.6em;
@@ -199,3 +201,63 @@ $icon-size: 3.6em;
 
   }
 }
+
+
+
+/* == WORK PROMO BANNER ==*/
+
+.work-promo {
+  position: relative;
+  background-color: $grey-darkest;
+  &__content,
+  &__link {
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    z-index: $z-content-upper;
+    display: flex;
+    align-items: center;
+  }
+  &__link { z-index: $z-content-overlay; }
+  &__bg {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: rgba($grey-darkest,0.5);
+      z-index: 1;
+    }
+  }
+}
+
+
+
+
+
+
+/* =================================================
+ * AUDIENCE PAGE
+ */
+
+.reach {
+  position: relative;
+  &__content {
+    pointer-events: none;
+    position: absolute;
+    z-index: $z-content-overlay;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    & a { pointer-events: all; }
+
+    background: -moz-linear-gradient(-45deg,  rgba(14,16,21,0.7) 0%, rgba(14,16,21,0) 50%);
+    background: -webkit-linear-gradient(-45deg,  rgba(14,16,21,0.7) 0%,rgba(14,16,21,0) 50%);
+    background: linear-gradient(135deg,  rgba(14,16,21,0.7) 0%,rgba(14,16,21,0) 50%);
+
+  }
+}
+
+
+
+

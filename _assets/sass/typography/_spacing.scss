@@ -12,7 +12,7 @@
   // specific spacing for all titles, these should be adjusted once typefaces & content are added
   p + .title { padding-top: $s5; }
   .title + p { padding-top: $s-3; }
-  .title + .title { padding-top: 0; padding-bottom: $s-3; }
+  .title + .title { padding-top: 0; }
 
   p + .core-title { padding-top: $s5; }
   .core-title + p { padding-top: $s-5; }

@@ -42,15 +42,14 @@ hr {
   height: 1px;
   margin-bottom: $s2;
   margin-top: 0;
-  background-color: rgba($grey-darkest,0.2);
+  background-color: rgba($grey-darkest,0.1);
   .text--white & { background-color: rgba($white,0.2); }
   * + & { margin-top: $s2; }
 }
 .hr {
-  &--left {
-    width: 80px;
-    margin-left: 0;
-  }
+  &--center{ width: 80px; margin-left: auto; margin-right: auto; }
+  &--left { width: 80px; margin-left: 0; }
+  &--right { width: 80px; margin-right: 0; }
 }
 
 

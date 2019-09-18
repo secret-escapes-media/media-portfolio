@@ -9,11 +9,19 @@
 
     {% include page/header.html %}
 
-    {% include page/banner.html %}
+    {% if page.layout == "project" %}
+      {% include page/project-banner.html %}
+    {% else %}
+      {% include page/banner.html %}
+    {% endif %}
 
     <div class="content-spacing section-spacing">
       {{ content }}
     </div>
+
+    {% unless page.id == "home" or page.id == "work" or page.layout == "project" %}
+      {% include page/promo-work.html %}
+    {% endunless %}
 
     {% include page/footer.html %}
 
