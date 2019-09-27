@@ -51,10 +51,25 @@ intro-content: >
   <div class="title title--sm"><img src="{{site.img}}/projects/{{page.id}}/title.gif" width="60%" alt="Nikon: Home"></div>
   <p class="text--xl text--medium">"Discover two beguiling destinations through the lens of the photographers that call them home."</p>
 
+hub-norway:
+  <hr>
+  <h4 class="title title--sm">Norway journey</h4>
+  <p>"Join Jeryl as local photographer Gunvor Eline shows him around her home. From the patchwork of fjords and islands to the soaring, white-capped peaks, both photographers captured this mesmerising landscape with the Nikon Z 7. Find their photos below, offering a glimpse at two very different approaches…"</p>
+
+hub-competition:
+  <hr>
+  <h4 class="title title--sm">Competition</h4>
+  <p>"Win an unforgettable escape to Norway and capture it with the Nikon Z 7"</p>
+
+hub-nikon:
+  <hr>
+  <h4 class="title title--sm">Nikon Z 7</h4>
+  <p>"Capture light like never before. Enjoy unrivalled optical quality and sensor quality in all lighting situations, with an ISO range that covers 64-25600 ISO – with minimal noise and astounding dynamic range."</p>
+
 
 photos-intro: >
   <h4 class="title title--sm title--sans">Professional photography</h4>
-  <p class="text--lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur.</p>
+  <p class="text--lg">We found two photographers from opposite ends of the earth and brought them together for two unforgettable adventures – in turn, they discovered each other’s homes. The pair explored Norway’s mesmerising Lofoten Islands, before heading to the urban sprawl of Singapore – each location home to one, and foreign to the other. View the photographs from their journey below.</p>
 
 photos:
   - image: photo1.jpg
@@ -64,14 +79,6 @@ photos:
   - image: photo5.jpg
   - image: photo6.jpg
   - image: photo7.jpg
-
-
-placeholder:
-  <hr>
-  <div class="title title--sans text--upper text--wide">Microsite</div>
-  <div class="space--xxs"></div>
-  <h4 class="title title--sm">Title</h4>
-  <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
 
 ---
 
@@ -88,11 +95,11 @@ placeholder:
   {% include project/layouts/image.html image="hub-home.jpg" ratio=16-9 %}
 </div>
 
-{% include project/layouts/section-longscroll.html image="hub-norway.jpg" content=page.placeholder %}
+{% include project/layouts/section-longscroll.html image="hub-norway.jpg" content=page.hub-norway %}
 
-{% include project/layouts/section-longscroll.html image="hub-competition.jpg" content=page.placeholder flip="true" %}
+{% include project/layouts/section-longscroll.html image="hub-competition.jpg" content=page.hub-competition flip="true" %}
 
-{% include project/layouts/section-longscroll.html image="hub-nikon.jpg" content=page.placeholder %}
+{% include project/layouts/section-longscroll.html image="hub-nikon.jpg" content=page.hub-nikon %}
 
 <div class="container">
   {% include project/layouts/content.html content=page.photos-intro %}

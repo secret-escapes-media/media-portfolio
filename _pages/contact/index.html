@@ -5,16 +5,27 @@ title: Get in touch
 nav: true
 nav-order: 6
 
-intro: >
-  <p class="text--xl">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+intro:
 
 ---
 
 <div class="vpad--xxl">
   <div class="container">
-    <div class="width width--xl">
-      {{page.intro}}
+    <div class="row">
+      <div class="col col--4">
+        <h2 class="title title--sm">Send us a message or give us a call below</h2>
+        <hr />
+        <h5 class="title title--xxs title--sans">Contact XX for XX</h5>
+        <p>Contact details</p>
+        <hr />
+        <h5 class="title title--xxs title--sans">Contact XX for XX</h5>
+        <p>Contact details</p>
+      </div>
+      <div class="col col--8">
+        {% include page/contact-form.html %}
+      </div>
     </div>
   </div>
+
 </div>
 

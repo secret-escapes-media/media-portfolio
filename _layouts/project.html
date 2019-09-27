@@ -10,7 +10,7 @@ layout: default
       <div class="col col--8">
         {{page.intro}}
         {% if page.live-url %}
-          <a href="{{page.live-url}}" class="link link--external">Check out the project</a>
+          <a href="{{page.live-url}}" target="_blank" class="link link--external">Check out the project</a>
         {% endif %}
       </div>
 
@@ -46,6 +46,15 @@ layout: default
   </div>
 </div>
 
+<div class="container text--center">
+  <div class="width width--xl">
+    <h2 class="title title--xs">To hear more about this campaign, or find out about how we could help your brand, get in touch today!</h2>
+    <div class="space--sm"></div>
+    <a href="{{site.baseurl}}/contact" class="btn btn--solid">Contact us</a>
+  </div>
+</div>
+
+
 
 <!-- NEXT PROJECT -->
 {% assign projects = site.html_pages | where: 'group-parent', 'work' %}
@@ -69,7 +78,7 @@ layout: default
 </div>
 {% endfor %}
 
-<div class="space--xl"></div>
+<div class="space--xxxl"></div>
 
 
 

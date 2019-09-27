@@ -1,0 +1,16 @@
+- id: contact
+  post-url: "#getFormUrl"
+  fields:
+    - id: name
+      type: text
+      label: Name
+      required: true
+    - id: email
+      type: email
+      label: Email
+      required: true
+    - id: message
+      type: text-long
+      label: Message
+      required: true
+  submit: Send message
