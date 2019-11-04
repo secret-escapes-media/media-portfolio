@@ -6,12 +6,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  height: 40%;
-  min-height: 150px;
-  max-height: 540px;
+  height: 60%;
+  min-height: 500px;
+  max-height: 600px;
   @include bp($lg){
-    height: 60%;
-    min-height: 540px;
+    min-height: 600px;
     max-height: none;
   }
   &__wrap {
@@ -27,13 +26,16 @@
     @include page-padding;
   }
   &__image {
+    @include background-attributes;
+    z-index: $z-content;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: calc(50% - 400px);
-    z-index: $z-content;
-    @include background-attributes;
+    left: 0;
+    @include bp($xxxl){
+      left: calc(50% - 400px);
+    }
   }
   &__background {
     position: absolute;
@@ -53,11 +55,13 @@
     }
   }
   &__accent {
-    position: absolute;
-    left: 0; bottom: 0;
-    z-index: 10;
-    width: 25%; height: 10px;
-    background-color: $orange;
+    @include bp($xxxl){
+      position: absolute;
+      left: 0; bottom: 0;
+      z-index: 10;
+      width: 25%; height: 10px;
+      background-color: $orange;
+    }
   }
   &__overlay {
     position: absolute;

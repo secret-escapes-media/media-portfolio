@@ -13,14 +13,14 @@ layout: default
 
 <div class="container">
   <div class="row">
-    {% assign projects = site.html_pages | where: 'group-parent', page.id | sort:'group-order' %}
+    {% assign projects = site.html_pages | where: 'group-parent', page.id | sort:'group-order' | reverse %}
     {% for project in projects %}
       {% if project.case-study %}
-        <div class="col col--8">
+        <div class="col col--6">
           {% include project/casestudy-tile.html %}
         </div>
       {% else %}
-        <div class="col col--4">
+        <div class="col col--3">
           {% include project/tile.html %}
         </div>
       {% endif %}

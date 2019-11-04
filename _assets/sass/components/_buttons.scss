@@ -12,7 +12,7 @@
   border-radius: 3px;
   cursor: pointer;
   @include transition;
-  &--sm { padding: $s0 $s4; font-size: $s-2; }
+  &--sm { padding: $s-1 $s3; font-size: 12px; }
   &--lg { padding: $s1 $s6; font-size: $s-1; }
   &--orange { background-color: $orange;
     &:hover { background-color: $orange-dark; }

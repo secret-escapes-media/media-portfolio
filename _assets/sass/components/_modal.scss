@@ -113,6 +113,10 @@ $modaltransition-distance: 4em;
       width: $icon-size;
     }
   }
+  & .project-gallery {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 }
 

@@ -17,27 +17,36 @@ $site-nav-padding-sm: $s2;
 
 .site-header {
   position: fixed;
-  background-color: transparent;
+  background-color: $black;
   top: 0;
   left: 0;
   right: 0;
   z-index: $z-nav-upper;
+  & .logo__svg {
+    width: 120px;
+    @include bp($md){
+      width: 140px;
+    }
+    & .st0 { fill: $white; }
+  }
   @include site-nav-height;
   @include transition;
-  & .logo__svg {
-    width: 160px;
-    & .st0 { fill: $grey-darkest; }
-  }
-  &.scrolled {
-    background-color: rgba($black,0.85);
-    & .logo__svg .st0 { fill: $white; }
-  }
-  &.hide {
-    top: -$site-nav-height;
+
+  @include bp($xxl){
+    background-color: transparent;
+    & .logo__svg {
+      width: 160px;
+      & .st0 { fill: $grey-darkest; }
+    }
+    &.scrolled {
+      background-color: rgba($black,0.85);
+      & .logo__svg .st0 { fill: $white; }
+    }
+    &.hide {
+      top: -$site-nav-height;
+    }
   }
 
-  // Need to come back to this, once I decide the best way. Either always in the layout file for the page
-  // I do like the way this works on capital region, each section has the nav padding, works really well
   &__offset:before {
     // corrects header overlapping content
     content: '';
@@ -50,10 +59,8 @@ $site-nav-padding-sm: $s2;
 
 // ---------- NAV FOR CORE SE SITE ----------
 
-// the breakpoint for the site nav list to appear as the mobile nav
-$nav-list-bp: 870px;
-// the breakpoint for the logo to appear at the bottom of the mobile nav
-$logo-bp: 600px;
+// nav-list-bp: $xxl;
+// logo-bp: $xxl;
 
 .site-nav {
   height: 100%;
@@ -89,19 +96,19 @@ $logo-bp: 600px;
     align-items: center;
     width: 25%;
     min-width: $site-nav-height-sm;
-    @include bp($logo-bp) { width: 33.33%; }
-    @include bp($nav-list-bp) { display: none; }
+    @include bp($xxl) { width: 33.33%; }
+    @include bp($xxl) { display: none; }
   }
   &__center {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
-    @include bp($logo-bp) {
+    @include bp($xxl) {
       width: 33.33%;
       flex-grow: 3; // needed for firefox
     }
-    @include bp($nav-list-bp) {
+    @include bp($xxl) {
       width: 33.33%;
       justify-content: flex-start;
     }
@@ -114,7 +121,7 @@ $logo-bp: 600px;
     height: 100%;
     min-width: $site-nav-height-sm;
     visibility: hidden;
-    @include bp($logo-bp) {
+    @include bp($xxl) {
       width: 66.667%;
       visibility: visible;
     }
@@ -126,7 +133,7 @@ $logo-bp: 600px;
     list-style: none;
     padding: 0;
     height: 100%;
-    @include bp($nav-list-bp) {
+    @include bp($xxl) {
       display: flex;
       flex-direction: row;
     }
@@ -204,9 +211,6 @@ $mobile-nav-width: 75%;
   background-color: rgba($grey-darker,.9);
   @include transition;
 
-  // spacing for logos in mobile site nav
-  .logo { margin: $s-2; }
-
   &.is-closed {
     left: -$mobile-nav-width;
     visibility: hidden;
@@ -233,29 +237,21 @@ $mobile-nav-width: 75%;
   &__middle {
     flex-grow: 1;
   }
-  &__bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: ($site-nav-height + 30);
-    padding: $s0;
-    margin-top: $s2;
-    background: rgba($grey-darker,.85);
-    @include bp($logo-bp){
-      display: none;
-    }
+  &__list {}
+  &__list-item {
+    list-style: none;
+    margin: 0; padding: 0;
   }
   &__list-link {
-    & + & { border-top: 1px solid rgba($black,.33); }
-    @include transition;
     display: block;
     padding-top: $s0;
     padding-bottom: $s0;
     font-size: $s0;
     font-weight: 700;
     text-transform: uppercase;
+    @include transition;
     &.is-current { color: $black; }
+    & + & { border-top: 1px solid rgba($black,.33); }
   }
-  @include bp($nav-list-bp){ display: none; }
+  @include bp($xxl){ display: none; }
 }

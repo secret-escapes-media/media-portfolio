@@ -17,7 +17,7 @@ process:
     content: We create bespoke design and editorial content, written with your key messaging in mind and shaped to suit our tone of voice, what we know our audience will engage with, and designed with your imagery and brand guidelines in mind. We create all campaign assets from display banners to video content, all managed in-house by our specialist team.
 
   - title: Project management and activation
-    content: You will have a dedicated campaign manager who will be your primary point of contact throughout the campaign. They will ensure the smooth running of the campaign and scheduling of all media. They will also ensure you are on track to hit your campaign goals & KPIs.
+    content: You will have a dedicated campaign manager who will be your primary point of contact throughout the campaign. They utilise our member data to target based on browsing behaviour, past bookings and our comprehensive knowledge of members' interests and holiday preferences. They are dedicated to ensuring the smooth running of the campaign to hit all goals & KPIs.
 
   - title: Results and reporting
     content: Your campaign manager will provide reports throughout the campaign, monitoring performance against benchmarks and optimising the campaign where necessary. At the end of your campaign you will be provided with a fully comprehensive post campaign report, with an analysis of the campaign plus recommendations and guidance for future campaigns.
@@ -34,21 +34,29 @@ products:
 
   - id: email
     title: Newsletters and email
-    content: With 16 million members in our UK database, we have one of the most powerful CRM offerings on the market, with an array of filtering tools at our disposal to target the right groups at the right time – pre-departure emails, location-reactive emails, weather-reactive emails and much more.
+    content: With 16 million members in our UK database, we have one of the most powerful CRM offerings on the market, with an array of filtering tools at our disposal to target the right groups at the right time – pre-and-post departure emails, geo-targeted emails, active-browser emails and much more.
 
   - id: display
     title: Display
     content: Our display advertising is built to your needs, as 70% of our formats are fully integrated in the site experience through bespoke sizing and purposeful placement. This offers our partners meaningful impact across our display assets.
 
-  - id: targeting
-    title: Targeting
-    content: We are able to target both browsing and booking behaviour amongst our members – what they’re searching for, what they ultimately book, how often they book a certain type of break etc. This insight is in addition to mosaic profiles, giving us a more rounded view of our members’ behaviours.
+  - id: social
+    title: Social
+    content: With 4.4 million followers on Facebook and 295k Instagram, we’re set to create powerful social engagement to spread your brand message. From Instagram Story takeovers to video edits perfectly tailored for our social platforms, we can leverage our reach in the roll-out of any campaign.
 
   - id: data
     title: Data capture
     content: We are experts at generating quality leads and insights by filtering our members by their preferences and tastes.
 
 ---
+
+
+
+
+
+
+
+
 
 
 <div class="vpad--xl">
@@ -76,7 +84,7 @@ products:
     <div class="row">
 
       {% for product in page.products %}
-      <div class="col col--4 text--center">
+      <div class="col col--lg-6 col--xxl-4 text--center">
         <div class="bg-img bg-img--21-9 bg-img--contain" style="background-image: url({{site.img}}/icons/product-{{product.id}}.svg);"></div>
         <div class="space--sm"></div>
         <h4 class="title title--xs title--sans">{{product.title}}</h4>
@@ -99,25 +107,11 @@ products:
       <div class="space--lg"></div>
     </div>
 
-    <!-- <div class="width width--xxl">
-      {% for step in page.process %}
-      <div class="bob {% cycle '', ' bob--swap'%}">
-        <div class="bob__img">
-          <div class="bg-img bg-img--16-9"></div>
-        </div>
-        <div class="bob__text">
-          <h4 class="title title--xs"><span class="title--md">{{forloop.index}}.</span> <span class="title--sans">{{step.title}}</span></h4>
-          <p>{{step.content}}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div> -->
-
-    <div class="row row--6-6 row--gutters-xl">
+    <div class="row row--6-6 row--gutters-lg">
       {% for step in page.process %}
       <div class="col">
         <span class="title title--xxxs title--sans">0{{forloop.index}}. </span>
-        <h4 class="title title--sm text--bolder">{{step.title}}</h4>
+        <h4 class="title title--xs text--bolder title--sans">{{step.title}}</h4>
         <p>{{step.content}}</p>
       </div>
       {% endfor %}

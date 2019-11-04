@@ -146,6 +146,9 @@
       &12 { flex: 0 0 100%; max-width: 100%; }
     }
 
+    // persistent col width through all breakpoints
+    &--constant- { @include column-widths; }
+
     // default breakpoint for individual columns - saves in always writing breakpoint in classes
     @include bp($lg) { &-- { @include column-widths; } }
 

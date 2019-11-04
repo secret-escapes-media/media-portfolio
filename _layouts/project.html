@@ -5,22 +5,37 @@ layout: default
 
 <div class="vpad--xxl">
   <div class="container">
-    <div class="row">
+    <div class="row row--reverse">
 
-      <div class="col col--8">
-        {{page.intro}}
-        {% if page.live-url %}
-          <a href="{{page.live-url}}" target="_blank" class="link link--external">Check out the project</a>
-        {% endif %}
-      </div>
-
-      <div class="col col--4">
+      <div class="col col--xl-4">
         <ul class="list--lined">
           {% for detail in page.details %}<li><strong>{{detail.key}}:</strong> {{detail.val}}</li>{% endfor %}
         </ul>
       </div>
 
+      <div class="col col--xl-8">
+        {{page.intro}}
+
+        {% if page.awards %}
+        <div class="project__awards">
+          <ul class="list--lined">
+            {% for award in page.awards %}
+            <li class="project__award">
+              <img class="project__award-image" src="{{site.img}}/awards/{{award.image}}" alt="">
+              <p class="project__award-text">{{award.name}}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if page.live-url %}
+          <a href="{{page.live-url}}" target="_blank" class="link link--external">Check out the project</a>
+        {% endif %}
+      </div>
+
     </div>
+
   </div>
 </div>
 
@@ -37,7 +52,6 @@ layout: default
   <div class="row row--4-4-4">
     {% for highlight in page.highlights %}
       <div class="col">
-        <hr>
         <div class="title title--md">{{highlight.val}}</div>
         <span class="title title--sans text--upper text--bold text--wide">{{highlight.key}}</span>
         <hr>
@@ -47,8 +61,8 @@ layout: default
 </div>
 
 <div class="container text--center">
-  <div class="width width--xl">
-    <h2 class="title title--xs">To hear more about this campaign, or find out about how we could help your brand, get in touch today!</h2>
+  <div class="width width--lg">
+    <p class="text text--xxl">To hear more about this campaign, or find out about how we could help your brand, get in touch today!</p>
     <div class="space--sm"></div>
     <a href="{{site.baseurl}}/contact" class="btn btn--solid">Contact us</a>
   </div>
