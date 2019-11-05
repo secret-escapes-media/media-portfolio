@@ -1,18 +1,15 @@
 # Site settings
 title: Media @ Secret Escapes
-client:
-  name: Client Name
-  link: "#client-name"
 core-se-link: https://www.secretescapes.com/current-sales
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Our core goal is to inspire and motivate our members to experience unforgettable travel around the world. Our discerning, global audience comes to us precisely for such inspiration, through the beautiful and luxurious hotels we offer and the in-the-know content we create. We can put your brand front and centre of this conversation, allowing you to speak directly to our members.
 
 # file paths
 url:     "http://mp.secretescapes.com" # the base hostname & protocol for your site
-baseurl: "/portfolio" # the subpath of your site, e.g. /blog/
-img:     "/portfolio/_assets/img"
-css:     "/portfolio/_assets/css"
-js:      "/portfolio/_assets/js"
+baseurl: "/media-sales" # the subpath of your site, e.g. /blog/
+img:     "/media-sales/_assets/img"
+css:     "/media-sales/_assets/css"
+js:      "/media-sales/_assets/js"
 
 
 # Build settings
