@@ -1,5 +1,5 @@
 - id: contact
-  post-url: "#getFormUrl"
+  post-url: "https://getform.io/f/351b24a4-8ed3-4bb0-91e1-2c2f6d8ad959"
   fields:
     - id: name
       type: text

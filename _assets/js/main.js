@@ -66,15 +66,16 @@ $(window).scroll(function(event){
 
 // ==== BANNER TEXT SWAP
 
-var iterations = 0;
-var interval = setInterval(textSwap, 2000);
-var words = ["Industry-leading", "Bespoke", "Digital", "Creative"];
+if( $('body').hasClass('page--home') ){
+  var iterations = 0;
+  var interval = setInterval(textSwap, 2000);
+  var words = ["Industry-leading", "Bespoke", "Digital", "Creative"];
+}
 
 function textSwap() {
   iterations++;
   if (iterations >= 3)
     clearInterval(interval);
-
 
   var text = $('#banner-text-swap');
   text.fadeOut();

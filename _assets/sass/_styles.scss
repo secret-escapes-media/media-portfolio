@@ -115,6 +115,9 @@
   }
 }
 
+/*== SCROLL TRACK ==*/
+// Long scroll with pinned content
+
 @include bp($xxxl){
 .scrolltrack {
 
@@ -149,6 +152,7 @@
 
 
 /*== PROJECT SLIDER ==*/
+// Used both on project pages and on modals
 
 $icon-size-sm: 2.4em;
 $icon-size: 3.6em;
@@ -271,8 +275,6 @@ $icon-size: 3.6em;
 
 
 
-
-
 /* =================================================
  * AUDIENCE PAGE
  */
@@ -293,7 +295,6 @@ $icon-size: 3.6em;
 
   }
 }
-
 
 
 

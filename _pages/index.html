@@ -60,13 +60,11 @@ services:
 
 
 <div class="vpad--xl">
-
   <div class="container">
-    <div class="width width--xl ">
+    <div class="width width--lg">
       {{page.intro}}
     </div>
   </div>
-
 </div>
 <hr>
 
@@ -129,7 +127,7 @@ services:
     </div>
 
     <div class="space--xl"></div>
-    <div class="row row--6-6">
+    <div class="row row--xxl-6-6">
       {% assign projects = site.html_pages | where: 'group-parent', 'work' %}
       {% assign casestudies = projects | where: 'case-study', 'true' | sort:'group-order' %}
       {% for project in casestudies %}

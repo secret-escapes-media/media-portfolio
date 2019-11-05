@@ -1,5 +1,4 @@
 var formFunctions = (function functionName(form) {
-
   //////////////////////////////////////////////////////////// private functions
 
   // add specifc status messages for this form

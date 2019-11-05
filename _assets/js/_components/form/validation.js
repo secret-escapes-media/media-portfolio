@@ -230,7 +230,7 @@ var formValidation = (function functionName(form) {
     // check all text inputs in form aren't blank
     form.element.find('textarea').each(function() { // validate all text inputs
       var inputValue = $(this).val();
-      if ( inputValue === '' || (/^\s+$/).test(inputValue) || inputValue.length < 100 ) {
+      if ( inputValue === '' || (/^\s+$/).test(inputValue) || inputValue.length < 20 ) {
         // input is empty, just whitespace or under 100 characters
         isInputRequired(this, errorMessages.textarea);
       } else { // there is no error with input

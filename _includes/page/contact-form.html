@@ -1,5 +1,5 @@
 {% assign form = site.data.form | where: 'id', 'contact' | first %}
-<form class="form boilerform signup-form" action="{{form.post-url}}" method="POST" novalidate>
+<form class="form boilerform contact-form" action="{{form.post-url}}" method="POST" novalidate>
   {% include form/messages.html %}
   <div class="form__content">
     {% for item in form.fields %}

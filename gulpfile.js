@@ -92,6 +92,7 @@ function buildJsMain(cb) {
     './_assets/js/_components/mapbox.js',
     './_assets/js/_components/form/functions.js',
     './_assets/js/_components/form/validation.js',
+    './_assets/js/_components/form/contact-form.js',
 
     // custom js for project
     './_assets/js/main.js',

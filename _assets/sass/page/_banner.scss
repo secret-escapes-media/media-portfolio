@@ -34,7 +34,7 @@
     bottom: 0;
     left: 0;
     @include bp($xxxl){
-      left: calc(50% - 400px);
+      left: calc(50% - 325px);
     }
   }
   &__background {
