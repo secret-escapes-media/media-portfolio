@@ -90,7 +90,7 @@
  */
 
 .layout--project {
-  & .logo__svg .st0 { fill: $white; }
+  & .logo__svg .st0 { fill: $white !important; }
 }
 
 .project {

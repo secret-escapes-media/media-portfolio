@@ -96,7 +96,7 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [3.3451914,50.4956969]
+      coordinates: [4.536122,50.802553]
     },
     properties: {
       id: '1',
@@ -110,52 +110,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [9.3004942,56.2128597]
+      coordinates: [5.758725,52.389158]
     },
     properties: {
       id: '2',
-      cat: 'secretescapes',
-      title: 'Denmark',
-      img: 'denmark',
-      description: '799,836'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [5.9692252,51.0968655]
-    },
-    properties: {
-      id: '3',
-      cat: 'secretescapes',
-      title: 'Germany',
-      img: 'germany',
-      description: '8,151,419'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [8.2239023,41.2118952]
-    },
-    properties: {
-      id: '4',
-      cat: 'secretescapes',
-      title: 'Italy',
-      img: 'italy',
-      description: '4,221,528'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [4.158446,52.2093655]
-    },
-    properties: {
-      id: '5',
       cat: 'secretescapes',
       title: 'Netherlands',
       img: 'netherlands',
@@ -166,10 +124,52 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [8.7793225,64.296159]
+      coordinates: [12.506086,55.707772]
+    },
+    properties: {
+      id: '3',
+      cat: 'secretescapes',
+      title: 'Denmark',
+      img: 'denmark',
+      description: '799,836'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [10.327410,51.129415]
+    },
+    properties: {
+      id: '4',
+      cat: 'secretescapes',
+      title: 'Germany',
+      img: 'germany',
+      description: '8,151,419'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.296430,42.947951]
     },
     properties: {
       id: '5',
+      cat: 'secretescapes',
+      title: 'Italy',
+      img: 'italy',
+      description: '4,221,528'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [9.216240,61.744660]
+    },
+    properties: {
+      id: '6',
       cat: 'secretescapes',
       title: 'Norway',
       img: 'norway',
@@ -180,10 +180,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-8.2016125,40.1301633]
+      coordinates: [-3.750246,40.387768]
     },
     properties: {
-      id: '5',
+      id: '7',
       cat: 'secretescapes',
       title: 'Spain',
       img: 'spain',
@@ -194,10 +194,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [8.4427687,61.752616]
+      coordinates: [15.528966,62.904235]
     },
     properties: {
-      id: '5',
+      id: '8',
       cat: 'secretescapes',
       title: 'Sweden',
       img: 'sweden',
@@ -208,10 +208,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [7.1032295,46.8095955]
+      coordinates: [8.294111,46.922465]
     },
     properties: {
-      id: '5',
+      id: '9',
       cat: 'secretescapes',
       title: 'Switzerland',
       img: 'switzerland',
@@ -222,10 +222,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-13.4259364,54.2317179]
+      coordinates: [-2.351723,53.929235]
     },
     properties: {
-      id: '5',
+      id: '10',
       cat: 'secretescapes',
       title: 'United Kingdom',
       img: 'united-kingdom',
@@ -236,10 +236,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-104.6561154,37.2756537]
+      coordinates: [-98.730704,39.055484]
     },
     properties: {
-      id: '5',
+      id: '11',
       cat: 'secretescapes',
       title: 'United States',
       img: 'united-states',
@@ -250,10 +250,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-2.4349004,46.1390412]
+      coordinates: [2.688753,46.872053]
     },
     properties: {
-      id: '5',
+      id: '12',
       cat: 'secretescapes',
       title: 'France',
       img: 'france',
@@ -264,10 +264,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [16.8921266,51.9358379]
+      coordinates: [19.305790,52.059686]
     },
     properties: {
-      id: '5',
+      id: '13',
       cat: 'secretescapes',
       title: 'Poland',
       img: 'poland',
@@ -278,10 +278,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [14.3539628,49.8001306]
+      coordinates: [15.385859,49.849968]
     },
     properties: {
-      id: '5',
+      id: '14',
       cat: 'secretescapes',
       title: 'Czech Republic',
       img: 'czech-republic',
@@ -292,10 +292,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [18.3839487,47.1575621]
+      coordinates: [19.575240,47.125380]
     },
     properties: {
-      id: '5',
+      id: '15',
       cat: 'secretescapes',
       title: 'Hungary',
       img: 'hungary',
@@ -306,10 +306,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [18.5785596,48.6688583]
+      coordinates: [19.763483,48.828791]
     },
     properties: {
-      id: '5',
+      id: '16',
       cat: 'secretescapes',
       title: 'Slovakia',
       img: 'slovakia',
@@ -320,10 +320,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [103.7041656,1.3143394]
+      coordinates: [103.877760,1.306118]
     },
     properties: {
-      id: '5',
+      id: '17',
       cat: 'secretescapes',
       title: 'Singapore',
       img: 'singapore',
@@ -334,10 +334,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [113.9876159,22.3529808]
+      coordinates: [114.187258,22.383585]
     },
     properties: {
-      id: '5',
+      id: '18',
       cat: 'secretescapes',
       title: 'Hong Kong',
       img: 'hong-kong',
@@ -348,10 +348,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [105.1222569,4.1389167]
+      coordinates: [102.670332,3.792089]
     },
     properties: {
-      id: '5',
+      id: '19',
       cat: 'secretescapes',
       title: 'Malaysia',
       img: 'malaysia',
@@ -362,10 +362,10 @@ if( $('#map').length > 0 ){
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [108.8510317,-2.3932826]
+      coordinates: [122.395874,-4.365064]
     },
     properties: {
-      id: '5',
+      id: '20',
       cat: 'secretescapes',
       title: 'Indonesia',
       img: 'indonesia',
@@ -394,7 +394,9 @@ if( $('#map').length > 0 ){
       //alert(marker.properties.id);
 
       // make a marker for each feature and add to the map
-    new mapboxgl.Marker(el)
+    new mapboxgl.Marker(el, {
+        offset: [0, -10]
+    })
       .setLngLat(marker.geometry.coordinates)
       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML('<div class="bg-img bg-img--16-9" style="background-image: url(../_assets/img/map/'+marker.properties.img+'.jpg); "></div><div class="boxpad--sm"><div class="title title--xxs" >' + marker.properties.title + '</div><p class="text--upper text--bold text--wide text--md title title--sans">' + marker.properties.description + ' members</p></div>'))
