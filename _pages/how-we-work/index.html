@@ -1,0 +1,67 @@
+---
+layout: default
+id: how-we-work
+title: How we work
+nav: true
+nav-order: 5
+
+intro: >
+  <p class="text--lg">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+
+
+process:
+  - title: Creative solutions
+    content: When actively pitching and responding to briefs we consider the strategic, commercial and creative fit to ensure the campaign concept meets the aims of your campaign. We will curate a proposal that works seamlessly in aligning the two brands and create a true partnership that is beneficial to both parties, with assets you can use outside of the partnership.
+
+  - title: Production
+    content: We create bespoke design and editorial content, written with your key messaging in mind and shaped to suit our tone of voice, what we know our audience will engage with, and designed with your imagery and brand guidelines in mind. We create all campaign assets from display banners to video content, all managed in-house by our specialist team.
+
+  - title: Project management
+    content: You will have a dedicated campaign manager who will be your primary point of contact throughout the campaign. They utilise our member data to target based on browsing behaviour, past bookings and our comprehensive knowledge of members' interests and holiday preferences. They are dedicated to ensuring the smooth running of the campaign to hit all goals & KPIs.
+
+  - title: Results and reporting
+    content: Your campaign manager will provide reports throughout the campaign, monitoring performance against benchmarks and optimising the campaign where necessary. At the end of your campaign you will be provided with a fully comprehensive post campaign report, with an analysis of the campaign plus recommendations and guidance for future campaigns.
+
+---
+
+
+
+
+
+<div class="vpad--xl">
+  <div class="container">
+    <div class="width width--lg">
+      {{page.intro}}
+    </div>
+  </div>
+</div>
+
+
+<div class="bg--grey-lightest vpad--xl">
+
+
+  <div class="container">
+
+      {% for step in page.process %}
+      <div class="bob{% cycle '', ' bob--swap'%}">
+        <div class="bob__img">
+          <div class="bg-img bg-img--16-9" style="background-image: url({{site.img}}/img.jpg);"></div>
+        </div>
+        <div class="bob__text">
+          <span class="title title--sans text--upper title--xxxs text--wide">Step 0{{forloop.index}}</span>
+          <div class="space--xs"></div>
+          <h4 class="title title--lg">{{step.title}}</h4>
+          <p class="text--lg">{{step.content}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+

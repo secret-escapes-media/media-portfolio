@@ -64,7 +64,7 @@ if( $('#map').length > 0 ){
   // ]]);
 
   var nav = new mapboxgl.NavigationControl();
-  map.addControl(nav, 'bottom-right');
+  map.addControl(nav, 'top-right');
 
 
   map.on('load', function() {

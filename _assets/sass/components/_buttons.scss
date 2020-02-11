@@ -40,6 +40,13 @@
       &:before { border-color: $orange; }
     }
   }
+  &--outline-turq {
+    &:before { border-color: $turquoise; }
+    &:hover {
+      background-color: $turquoise; color: $white;
+      &:before { border-color: $turquoise; }
+    }
+  }
 
   &--solid {
     background-color: $turquoise; color: $white;
@@ -54,6 +61,18 @@
   &--white {
     background-color: rgba($white,0.8); color: $grey-darkest;
     &:hover { background-color: $white; }
+  }
+
+  &--arrow {
+    background-image: url('../img/icons/arrow-right.svg');
+    background-size: 0.75em;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 999px;
+    border: 1px solid rgba($white,0.2);
+    width: 3em; height: 3em;
+    padding: 0;
+    &:hover { background-color: $grey-darker; }
   }
 
 }

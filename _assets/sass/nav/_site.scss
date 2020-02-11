@@ -21,7 +21,7 @@ $site-nav-padding-sm: $s2;
   top: 0;
   left: 0;
   right: 0;
-  z-index: $z-nav-upper;
+  z-index: 1000;
   & .logo__svg {
     width: 120px;
     @include bp($md){

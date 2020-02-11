@@ -12,7 +12,7 @@
   &2-1:before   { padding-top: 50%; }
   &21-9:before   { padding-top: 42.8571429%; }
   &3-1:before   { padding-top: 33.33334%; }
-  &circle        { border-radius: 9999999em; }
+  &circle        { border-radius: 9999999em; overflow: hidden; }
 }
 
 .bg-img {

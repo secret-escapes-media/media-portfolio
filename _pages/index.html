@@ -20,12 +20,15 @@ clients:
     name: Estee Lauder
   - logo: germany.png
     name: Germany
+    case-study: winter-in-germany
   - logo: hunter.svg
     name: Hunter
   - logo: lexus.svg
     name: Lexus
+    case-study: lexus-the-design-collection
   - logo: nikon.svg
     name: Nikon
+    case-study: nikon-home
   - logo: qatar-airways.svg
     name: Qatar Airways
   - logo: royal-caribbean.svg
@@ -34,13 +37,20 @@ clients:
     name: Sandals
   - logo: singapore.svg
     name: Singapore
+    case-study: singapore
   - logo: south-africa.svg
     name: South Africa
+    case-study: south-africa
   - logo: visit-britain.svg
     name: Visit Britain
+    case-study: visit-britain
 
 
 services:
+  - id: influencer-marketing
+    title: Influencer marketing
+  - id: hotel-experiential
+    title: Hotel experiential
   - id: audience-segmentation
     title: Audience segmentation
   - id: incremental-bookings
@@ -66,16 +76,15 @@ services:
     </div>
   </div>
 </div>
-<hr>
 
 
 
-<div class="bg--white vpad--xl">
+<div class="bg--grey-lightest vpad--xl">
 
   <div class="container clients" id="clients">
     <div class="width width--xl text--center">
 
-      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Clients</h2>
+      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Our Clients</h2>
       <div class="space--xs"></div>
       <h3 class="title title--lg">Who we work with</h3>
       <div class="space--xl"></div>
@@ -83,7 +92,26 @@ services:
     <div class="row row--gutters-xs">
       {% for client in page.clients %}
         <div class="col col--constant-3 col--lg-2">
-          <div class="clients__logo clients__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg-img--zoom bg--grey-lightest" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
+          {% if client.case-study %}
+          <div class="client">
+            <div class="client__flipper">
+              <div class="client__logo client__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg--white" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
+              <div class="client__link bg-img bg-img--1-1 bg--grey-darkest text--white">
+                <div class="bg-img__content">
+                  <div class="boxpad--sm">
+                    <div class="title title--sans">View the case study</div>
+                    <div class="space--sm"></div>
+                    <a href="{{site.baseurl}}/work/{{client.case-study}}" class="btn btn--arrow"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <div class="client">
+            <div class="client__logo client__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg--white" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
+          </div>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -95,21 +123,29 @@ services:
     <div class="width width--xl text--center">
 
       <div class="space--lg"></div>
-      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Services</h2>
+      <h2 class="title title--sans text--upper text--lg text--bold text--wide">Our Services</h2>
       <div class="space--xs"></div>
-      <h3 class="title title--lg">What we deliver</h3>
+      <h3 class="title title--lg">What we can do for you</h3>
       <p class="text--lg">We have a range of insights and expertise that can be used to successfully deliver on your campaign objectives and targets.</p>
     </div>
     <div class="space--xl"></div>
-    <div class="row">
+    <div class="row row--gutters-xs">
       {% for item in page.services %}
-      <div class="col col--constant-4 col--lg-2 text--center services__item">
-        <div class="services__item-icon bg-img bg-img--1-1 bg-img--circle" style="background-image: url({{site.img}}/icons/icon-{{item.id}}.svg);" alt="{{item.title}}">
+      <div class="col col--constant-4 col--lg-3 text--center services__item">
+        <div class="bg-img bg-img--1-1 bg--white">
+          <div class="bg-img__content">
+            <div class="boxpad--lg">
+              <img class="services__item-icon" src="{{site.img}}/icons/icon-{{item.id}}.svg"/>
+              <div class="space--md"></div>
+              <h4 class="title title--xxxs title--sans">{{item.title}}</h4>
+            </div>
+          </div>
         </div>
-        <div class="space--xs"></div>
-        <h4 class="title title--xxxs title--sans">{{item.title}}</h4>
       </div>
       {% endfor %}
+    </div>
+    <div class="space--xl text--center">
+      <a href="{{site.baseurl}}/what-we-do" class="btn btn--outline btn--outline-turq">Read more</a>
     </div>
   </div>
 
@@ -129,7 +165,7 @@ services:
     <div class="space--xl"></div>
     <div class="row row--xxl-6-6">
       {% assign projects = site.html_pages | where: 'group-parent', 'work' %}
-      {% assign casestudies = projects | where: 'case-study', 'true' | sort:'group-order' %}
+      {% assign casestudies = projects | where: 'feature', 'true' | sort:'feature-order' %}
       {% for project in casestudies %}
       <div class="col">
         {% include project/casestudy-tile.html %}

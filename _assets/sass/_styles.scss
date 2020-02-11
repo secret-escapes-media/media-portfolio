@@ -5,21 +5,55 @@
  * HOME PAGE
  */
 
-.clients {
+.client {
+  perspective: 900px;
+
+  // flip the pane when hovered
+  &:hover &__flipper, &.hover &__flipper { transform: rotateY(180deg); }
+
+  // flip speed goes here
+  &__flipper {
+  	transition: 0.6s;
+  	transform-style: preserve-3d;
+  	position: relative;
+    width: 100%;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+  }
+
+  // front
   &__logo {
+  	z-index: 2;
+  	transform: rotateY(0deg);
     background-size: 75%;
     &-sandals{ background-size: 60%; }
     &-hunter { background-size: 60%; }
     &-nikon { background-size: 50%; }
   }
+
+  // back, initially hidden pane
+  &__link { transform: rotateY(180deg); }
+
+  &__logo, &__link {
+    width: 100%;
+  	backface-visibility: hidden;
+  	transform-style: preserve-3d;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  }
+
 }
 
 .services {
   &__item {
     &-icon {
-      background-size: 50%;
-      border: 1px solid rgba($grey-darkest,0.1);
-      box-shadow: 0 0 15px 0 rgba($grey-darkest,0.1);
+      width: 70%;
+      max-width: 180px;
     }
   }
 }
@@ -284,14 +318,14 @@ $icon-size: 3.6em;
   &__content {
     pointer-events: none;
     position: absolute;
-    z-index: $z-content-overlay;
+    z-index: $z-overlay-upper;
     top: 0; left: 0;
     right: 0; bottom: 0;
     & a { pointer-events: all; }
 
-    background: -moz-linear-gradient(-45deg,  rgba(14,16,21,0.7) 0%, rgba(14,16,21,0) 50%);
-    background: -webkit-linear-gradient(-45deg,  rgba(14,16,21,0.7) 0%,rgba(14,16,21,0) 50%);
-    background: linear-gradient(135deg,  rgba(14,16,21,0.7) 0%,rgba(14,16,21,0) 50%);
+    background: -moz-linear-gradient(0deg,  rgba($grey-darkest,1) 0%, rgba($grey-darkest,0) 20%);
+    background: -webkit-linear-gradient(0deg,  rgba($grey-darkest,1) 0%,rgba($grey-darkest,0) 20%);
+    background: linear-gradient(0deg,  rgba($grey-darkest,1) 0%,rgba($grey-darkest,0) 20%);
 
   }
 }
