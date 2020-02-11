@@ -168,9 +168,9 @@ $site-nav-padding-sm: $s2;
     }
     &-link {
       display: flex;
-      padding: $s-1 $s-4;
+      padding: $s-1 $s-3;
       font-weight: 600;
-      font-size: $s-1;
+      font-size: $s0;
       line-height: 0;
       @include transition;
     }
