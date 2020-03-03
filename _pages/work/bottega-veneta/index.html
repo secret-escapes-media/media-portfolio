@@ -1,0 +1,84 @@
+---
+layout: project
+case-study: true
+
+id: bottega-veneta
+title: Bottega Veneta
+group-parent: work
+group-order: 10
+
+intro: >
+  <p class="text--xl">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.</p>
+
+live-url: "http://m-stg.secretescapes.com/uk/2019/bottega-veneta/collection.html"
+
+details:
+  - key: Date
+    val: 2019
+  - key: Client
+    val: Bottega Veneta
+  - key: Territories
+    val: UK
+  - key: Outcomes
+    val: Bespoke Collection, Display, Email
+
+highlights:
+  - key: Display impressions
+    val: "999,999"
+  - key: Email CTR
+    val: "99.99%"
+  - key: Social reach
+    val: "999"
+
+gallery:
+  - image: gallery-img-0.jpg
+  - image: gallery-img-1.jpg
+  - image: gallery-img-2.jpg
+  - image: gallery-img-3.jpg
+
+challenge: >
+  <h2 class="title title--lg">The challenge</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+solution: >
+  <h2 class="title title--lg">The solution</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+result: >
+  <h2 class="title title--lg">The result</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+
+
+email-collection:
+  <hr>
+  <h4 class="title title--sm">Collection Email</h4>
+  <p>Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+
+email-marketing:
+  <hr>
+  <h4 class="title title--sm">Marketing Email</h4>
+  <p>Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+
+---
+
+
+
+
+{% include project/layouts/content.html content=page.challenge %}
+
+<div class="container container--xxl">
+  {% include project/layouts/gallery.html content=page.gallery %}
+</div>
+
+{% include project/layouts/content.html content=page.solution %}
+
+<div class="container container--xxl">
+  {% include project/layouts/image.html image="in-situ.jpg" ratio=16-9 %}
+</div>
+
+{% include project/layouts/section-longscroll.html image="email-collection.jpg" content=page.email-collection %}
+
+{% include project/layouts/section-longscroll.html image="email-marketing.jpg" content=page.email-marketing flip="true" %}
+
+{% include project/layouts/content.html content=page.result %}

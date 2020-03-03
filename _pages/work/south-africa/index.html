@@ -1,0 +1,65 @@
+---
+layout: project
+case-study: true
+
+id: south-africa
+title: South Africa
+group-parent: work
+group-order: 13
+
+intro: >
+  <p class="text--xl">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.</p>
+
+live-url: "http://m-stg.secretescapes.com/uk/2018/southafrica/"
+
+details:
+  - key: Date
+    val: 2019
+  - key: Client
+    val: South Africa Tourism
+  - key: Territories
+    val: UK
+  - key: Outcomes
+    val: Video, Print, Microsite, Display, Email
+
+highlights:
+  - key: Display impressions
+    val: "999,999"
+  - key: Email CTR
+    val: "99.99%"
+  - key: Social reach
+    val: "999"
+
+gallery:
+  - image: gallery-img-0.jpg
+  - image: gallery-img-1.jpg
+  - image: gallery-img-2.jpg
+  - image: gallery-img-3.jpg
+
+challenge: >
+  <h2 class="title title--lg">The challenge</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+solution: >
+  <h2 class="title title--lg">The solution</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+result: >
+  <h2 class="title title--lg">The result</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+
+---
+
+
+
+
+{% include project/layouts/content.html content=page.challenge %}
+
+<div class="container container--xxl">
+  {% include project/layouts/gallery.html content=page.gallery %}
+</div>
+
+{% include project/layouts/content.html content=page.solution %}
+
+{% include project/layouts/content.html content=page.result %}

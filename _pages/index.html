@@ -14,27 +14,12 @@ intro: >
   <p class="text--lg">Through creative concepts and innovative solutions, we will craft high-performing, bespoke campaigns across web, social, video, email and display, proven to captivate our members and influence their wanderlust. </p>
 
 clients:
-  - logo: british-airways.svg
-    name: British Airways
-  - logo: estee-lauder.svg
-    name: Estee Lauder
   - logo: germany.png
     name: Germany
     case-study: winter-in-germany
-  - logo: hunter.svg
-    name: Hunter
   - logo: lexus.svg
     name: Lexus
     case-study: lexus-the-design-collection
-  - logo: nikon.svg
-    name: Nikon
-    case-study: nikon-home
-  - logo: qatar-airways.svg
-    name: Qatar Airways
-  - logo: royal-caribbean.svg
-    name: Royal Caribbean
-  - logo: sandals.svg
-    name: Sandals
   - logo: singapore.svg
     name: Singapore
     case-study: singapore
@@ -44,6 +29,22 @@ clients:
   - logo: visit-britain.svg
     name: Visit Britain
     case-study: visit-britain
+  - logo: nikon.svg
+    name: Nikon
+    case-study: nikon-home
+
+  - logo: british-airways.svg
+    name: British Airways
+  - logo: estee-lauder.svg
+    name: Estee Lauder
+  - logo: hunter.svg
+    name: Hunter
+  - logo: qatar-airways.svg
+    name: Qatar Airways
+  - logo: royal-caribbean.svg
+    name: Royal Caribbean
+  - logo: sandals.svg
+    name: Sandals
 
 
 services:
@@ -93,7 +94,7 @@ services:
       {% for client in page.clients %}
         <div class="col col--constant-3 col--lg-2">
           {% if client.case-study %}
-          <div class="client">
+          <div class="client client--flip">
             <div class="client__flipper">
               <div class="client__logo client__logo-{{client.name|slugify}} bg-img bg-img--1-1 bg--white" style="background-image: url({{site.img}}/clients/{{client.logo}});"></div>
               <div class="client__link bg-img bg-img--1-1 bg--grey-darkest text--white">

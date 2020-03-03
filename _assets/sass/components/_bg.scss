@@ -10,7 +10,8 @@
   &--grey-lighter   { background-color: $grey-lighter; }
   &--grey-lightest  { background-color: $grey-lightest; }
   &--black          { background-color: $black; }
-  
+  &--orange          { background-color: $orange; }
+
   &--img   { @include background-attributes; }
   &__fixed {
     position: fixed;

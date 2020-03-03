@@ -8,10 +8,16 @@
 .client {
   perspective: 900px;
 
-  // flip the pane when hovered
-  &:hover &__flipper, &.hover &__flipper { transform: rotateY(180deg); }
+  // front
+  &__logo {
+    background-size: 75%;
+    &-sandals{ background-size: 60%; }
+    &-hunter { background-size: 60%; }
+    &-nikon { background-size: 50%; }
+  }
 
-  // flip speed goes here
+  // CASE STUDY LOGOS
+  // flip the pane when hovered
   &__flipper {
   	transition: 0.6s;
   	transform-style: preserve-3d;
@@ -24,21 +30,18 @@
       padding-top: 100%;
     }
   }
+  &:hover &__flipper { transform: rotateY(180deg); }
 
-  // front
-  &__logo {
+  &--flip &__logo {
   	z-index: 2;
   	transform: rotateY(0deg);
-    background-size: 75%;
-    &-sandals{ background-size: 60%; }
-    &-hunter { background-size: 60%; }
-    &-nikon { background-size: 50%; }
   }
 
   // back, initially hidden pane
-  &__link { transform: rotateY(180deg); }
+  &--flip &__link { transform: rotateY(180deg); }
 
-  &__logo, &__link {
+  &--flip &__logo,
+  &--flip &__link {
     width: 100%;
   	backface-visibility: hidden;
   	transform-style: preserve-3d;
@@ -128,6 +131,15 @@
 }
 
 .project {
+
+  &__intro {
+    padding-top: $s8;
+    padding-bottom: $s8;
+    margin-bottom: $s8;
+    background-color: $black;
+    color: $white;
+  }
+
   &__awards { margin-top: $s0; }
   &__award {
     display: flex;

@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<div class="vpad--xxl">
+<div class="project__intro text--white">
   <div class="container">
     <div class="row row--reverse">
 
@@ -30,7 +30,8 @@ layout: default
         {% endif %}
 
         {% if page.live-url %}
-          <a href="{{page.live-url}}" target="_blank" class="link link--external">Check out the project</a>
+          <div class="space--sm"></div>
+          <a href="{{page.live-url}}" target="_blank" class="btn btn--outline btn--outline-white btn--icon btn--icon-external">Check out the project</a>
         {% endif %}
       </div>
 

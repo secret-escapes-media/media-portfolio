@@ -1,7 +1,7 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: $s0 $s5;
+  padding: $s0 $s3;
   color: $white;
   font-weight: 600;
   font-size: 13px;
@@ -31,6 +31,13 @@
       border-style: solid;
       border-radius: inherit;
       @include transition;
+    }
+  }
+  &--outline-white {
+    &:before { border-color: rgba($white,0.2); }
+    &:hover {
+      border-color: rgba($white,0.8);
+      &:before { border-color: rgba($white,0.8); }
     }
   }
   &--outline-orange {
@@ -75,5 +82,18 @@
     &:hover { background-color: $grey-darker; }
   }
 
-}
+  &--icon:after {
+    content: "";
+    height: 18px; width: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+    width: 16px;
+  }
+  &--icon-external:after { background-image: url('../img/icons/icon-external-link.svg'); }
+  .text--white &--icon-external:after { background-image: url('../img/icons/icon-external-link-wh.svg'); }
 
+}

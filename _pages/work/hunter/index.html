@@ -1,0 +1,79 @@
+---
+layout: project
+
+id: hunter
+title: Hunter
+group-parent: work
+group-order: 11
+
+intro: >
+  <p class="text--xl">Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.</p>
+
+live-url: "http://m-stg.secretescapes.com/uk/2019/hunter-winter-breaks/"
+
+details:
+  - key: Date
+    val: 2019
+  - key: Client
+    val: Hunter Boots
+  - key: Territories
+    val: UK
+  - key: Outcomes
+    val: Microsite, Display, Email
+
+highlights:
+  - key: Display impressions
+    val: "999,999"
+  - key: Email CTR
+    val: "99.99%"
+  - key: Social reach
+    val: "999"
+
+gallery:
+  - image: gallery-img-0.jpg
+  - image: gallery-img-1.jpg
+  - image: gallery-img-2.jpg
+  - image: gallery-img-3.jpg
+
+challenge: >
+  <h2 class="title title--lg">The challenge</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+solution: >
+  <h2 class="title title--lg">The solution</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+result: >
+  <h2 class="title title--lg">The result</h2>
+  <p class="text--lg">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+
+
+
+site-longscroll:
+  <hr>
+  <h4 class="title title--sm">Site</h4>
+  <p>Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+
+site-longscroll-1:
+  <hr>
+  <h4 class="title title--sm">Site</h4>
+  <p>Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+
+---
+
+
+
+
+{% include project/layouts/content.html content=page.challenge %}
+
+<div class="container container--xxl">
+  {% include project/layouts/gallery.html content=page.gallery %}
+</div>
+
+{% include project/layouts/content.html content=page.solution %}
+
+{% include project/layouts/section-longscroll.html image="site-longscroll.jpg" content=page.site-longscroll %}
+
+{% include project/layouts/section-longscroll.html image="site-longscroll-1.jpg" content=page.site-longscroll-1 flip="true" %}
+
+{% include project/layouts/content.html content=page.result %}
