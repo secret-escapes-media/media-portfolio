@@ -6,10 +6,10 @@ description: >
 
 # file paths
 url:     "http://mp.secretescapes.com" # the base hostname & protocol for your site
-baseurl: "/uk/media-sales" # the subpath of your site, e.g. /blog/
-img:     "/uk/media-sales/_assets/img"
-css:     "/uk/media-sales/_assets/css"
-js:      "/uk/media-sales/_assets/js"
+baseurl: "/media" # the subpath of your site, e.g. /blog/
+img:     "/media/_assets/img"
+css:     "/media/_assets/css"
+js:      "/media/_assets/js"
 
 
 # Build settings
