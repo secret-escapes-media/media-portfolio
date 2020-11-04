@@ -27,7 +27,7 @@ function browserSyncServe() {
     server: {
       baseDir: '_site/',
       routes: {
-        '/media-sales': '_site/'
+        '/media': '_site/'
       }
     }
   });
