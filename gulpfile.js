@@ -23,11 +23,14 @@ function cleanAssets() {
 
 // start browserSync local server and show under site subdirectory
 function browserSyncServe() {
+  const baseurl = '/media';
   browserSync.init({
+    baseDir: '_site/',
+    ui: false,
+    startPath: baseurl,
     server: {
-      baseDir: '_site/',
       routes: {
-        '/media': '_site/'
+        [baseurl]: '_site/'
       }
     }
   });
